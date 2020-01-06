@@ -5,18 +5,30 @@ categories: [brewing]
 tags: [wine, hobby]
 ---
 
-# Test
+Afer a roaring success, or rather learning experience of perrier and mead [link](inputme) , it is time for more homebrew.
 
-p. Afer a roaring success, or rather learning experience of perrier and mead, it is time for more homebrew.
+### Pineapple Wine
 
-# My main heading
-{: .intro }
+* 3 small pineapples
+* 1 kg sugar
+* 250 g raisins
+* yeast nutrient (boiled baker's yeast)
+* Campden tablets
+* Yeast EC-1118
 
-This is my initial paragraph. In it I’d like to provide a link to the [Jekyll homepage](http://jekyllrb.com/ "Jekyll"). I want to add **bold** and *italic* formatting to text as well using the `strong` and `emphasis` tags.
+### Apple Cider
 
-This is another paragraph. I’d like to follow it with an unordered list.
+* 4 litres apple juice
+* 100 g raisins
+* yeast nutrient (boiled baker's yeast)
+* Campden tablets
+* Yeast EC-1118
 
-* item 1
-* item 2
-* item 3
+### Summer Fruits Wine
 
+* 2 kg frozen summer fruits
+* 500 g sugar
+* 100 g raisins
+* yeast nutrient (boiled baker's yeast)
+* Campden tablets
+* Yeast EC-1118
