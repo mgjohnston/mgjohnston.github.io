@@ -1,8 +1,8 @@
 ---
 layout: post
-title: You're up and running!
-categories: [blog, travel]
-tags: [hot, summer]
+title: Country Wines #2: Pineapples
+categories: [brewing]
+tags: [wine, hobby]
 ---
 
 Hello world.
