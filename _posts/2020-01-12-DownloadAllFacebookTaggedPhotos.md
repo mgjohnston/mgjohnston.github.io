@@ -13,15 +13,15 @@ I found an easy solution, edited from [Nathan Merrit's post](https://gnmerritt.n
 
 2. Scroll to the bottom of your "Photos of you" page [<https://www.facebook.com/me/photos>] and run:
 
-`for (link of document.getElementsByTagName('a')) { if (!link.href.includes("?fbid=")) continue; console.log(new URL(link.href).searchParams.get("fbid")); }`
+  `for (link of document.getElementsByTagName('a')) { if (!link.href.includes("?fbid=")) continue; console.log(new URL(link.href).searchParams.get("fbid")); }`
 
-Save the console output as "list.txt" in the same folder as the script and edit just to have the FBIDs of the photos. 
+  Save the console output as "list.txt" in the same folder as the script and edit just to have the FBIDs of the photos. 
 
 3. Obtain your cookies.txt for Facebook.
 
-I used [cookies.txt for Chrome](https://chrome.google.com/webstore/detail/cookiestxt/njabckikapfpffapmjgojcnbfjonfjfg) and name this "cookies.txt" in the same folder.
+  I used [cookies.txt for Chrome](https://chrome.google.com/webstore/detail/cookiestxt/njabckikapfpffapmjgojcnbfjonfjfg) and name this "cookies.txt" in the same folder.
 
 4. Use Python 2 to download the photos.
 
-`python download.py`
+  `python download.py`
 
