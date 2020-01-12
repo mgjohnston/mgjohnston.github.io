@@ -17,11 +17,11 @@ I found an easy solution, edited from [Nathan Merrit's post](https://gnmerritt.n
 
 Save the console output as "list.txt" in the same folder as the script and edit just to have the FBIDs of the photos. 
 
-2. Obtain your cookies.txt for Facebook.
+3. Obtain your cookies.txt for Facebook.
 
 I used [cookies.txt for Chrome](https://chrome.google.com/webstore/detail/cookiestxt/njabckikapfpffapmjgojcnbfjonfjfg) and name this "cookies.txt" in the same folder.
 
-3. Use Python 2 to download the photos.
+4. Use Python 2 to download the photos.
 
 `python download.py`
 
