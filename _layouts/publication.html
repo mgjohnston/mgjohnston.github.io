@@ -3,7 +3,7 @@ layout: default
 ---
 
 <article class="post">
-  <h1><a href="https://doi.org/{{ page.ref-doi}}">{% if page.work-type == "preprint" %}<strong>Preprint </strong>{% endif %}{{ page.ref-title}} ({{ page.ref-year}})</a></h1>
+  <h1><a href="https://doi.org/{{ page.ref-doi}}">{% if page.work-type == "preprint" %}<strong>Preprint: </strong>{% endif %}{{ page.ref-title}} ({{ page.ref-year}})</a></h1>
 
   <div class="entry">
     <p>{{ page.ref-authors | markdownify }}</p>
