@@ -15,7 +15,7 @@ permalink: /publications/
     <p>{% if pub.work-type == "preprint" %} Preprint {% endif %}{{ pub.ref-title}} ({{ pub.ref-year}})</p>
     <p>{{ pub.ref-authors | markdownify }}</p>
     <p><em>{{ pub.ref-journal}}</em> {{ pub.ref-vol}} <a href="https://doi.org/{{ pub.ref-doi}}">{{ pub.ref-doi}}</a></p>
-    {% if preprint-doi != "NA" And  pub.work-type != "preprint" %}<p>Originally a [preprint](https://doi.org/{{ pub.preprint-doi }})</p>{% endif %}
+    {% if pub.preprint-doi != "NA" And pub.work-type != "preprint" %}<p>Originally a <a href="https://doi.org/{{ pub.preprint-doi}}">preprint/a>.</p>{% endif %}
   </li>
 {% endfor %}
 </ol>
