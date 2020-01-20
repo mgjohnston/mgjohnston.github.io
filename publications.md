@@ -25,6 +25,12 @@ permalink: /publications/
     <p> <strong> Johnston MG </strong> </p>
     <p> <em> Biological Sciences Review </em> 32(4) </p>
   </li>
+  <li>
+    <p> International Biology Olympiad Theory Papers (2017) </p>
+    <p> <a href="https://ibo2017.rsb.org.uk/organisation/committees.html"><strong> Johnston MG* </strong>, Hodgson J* </a></p>
+    <p> <em> IBO 2017 </em></p>
+    <p> <a href="https://www.ibo-info.org/en/info/papers.html">Papers</a> </p>
+  </li>
 </ol>
 
 
