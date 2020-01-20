@@ -28,7 +28,13 @@ permalink: /publications/
     {% continue %}
   {% endif %}
   <li>
-    <p><strong>{{ pub.work-type }}</strong>{{ pub.ref-title}} ({{ pub.ref-year}}) <a href="{{ site.baseurl }}{{ pub.url }}">Abstract</a></p>
+    <p><strong>
+      {% if pub.work-type == "poster" %}
+        Poster: 
+      {% elsif pub.work-type == "oral" %}
+        Oral presentation: 
+      {% endif %}
+      </strong> {{ pub.ref-title}} ({{ pub.ref-year}})</p>
     <p>{{ pub.ref-authors | markdownify }}</p>
     <p><em>{{ pub.ref-journal}}</em></p>
   </li>
