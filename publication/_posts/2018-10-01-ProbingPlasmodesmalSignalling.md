@@ -1,6 +1,6 @@
 ---
 layout: publication
-title: Plasmodesmata: seeing more with C4
+title: Probing Plasmodesmal Signalling
 categories: publication
 
 work-type: poster
