@@ -3,7 +3,7 @@ layout: publication
 title: Does Evolutionary History Correlate with Contemporary Extinction Risk by Influencing Range Size Dynamics?
 categories: publication
 
-work-type: Paper
+work-type: paper
 ref-authors: Tanentzap AJ, Igea J, **Johnston MG**, Larcombe MJ
 ref-year: 2020
 ref-title: Does Evolutionary History Correlate with Contemporary Extinction Risk by Influencing Range Size Dynamics?
