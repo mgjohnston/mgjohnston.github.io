@@ -3,14 +3,14 @@ layout: default
 ---
 
 <article class="post">
-  <h1><a href="https://doi.org/{{ pub.ref-doi}}">{% if pub.work-type == "preprint" %}<strong>Preprint </strong>{% endif %}{{ pub.ref-title}} ({{ pub.ref-year}})</a></h1>
+  <h1><a href="https://doi.org/{{ page.ref-doi}}">{% if page.work-type == "preprint" %}<strong>Preprint </strong>{% endif %}{{ page.ref-title}} ({{ page.ref-year}})</a></h1>
 
   <div class="entry">
     <p>{{ page.ref-authors | markdownify }}</p>
-    <p><em>{{ pub.ref-journal}}</em> {{ pub.ref-vol}} <a href="https://doi.org/{{ pub.ref-doi}}">{{ pub.ref-doi}}</a></p>
+    <p><em>{{ page.ref-journal}}</em> {{ page.ref-vol}} <a href="https://doi.org/{{ page.ref-doi}}">{{ page.ref-doi}}</a></p>
     <h3> Abstract </h3>
       {{ content }}
-    {% if pub.preprint-doi != "NA" and pub.work-type != "preprint" %}<p>Originally a <a href="https://doi.org/{{ pub.preprint-doi}}">preprint</a>.</p>{% endif %}
+    {% if page.preprint-doi != "NA" and page.work-type != "preprint" %}<p>Originally a <a href="https://doi.org/{{ page.preprint-doi}}">preprint</a>.</p>{% endif %}
   </div>
 
   <div class="date">
