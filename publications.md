@@ -21,8 +21,8 @@ permalink: /publications/
 </ol>
 
 ### Other Publications
-
-<ol markdown="1">
+{::options parse_block_html="true" /}
+<ol>
   <li>
     <p> Plant Cell Connections (2020) </p>
     <p> **Johnston MG** </p>
