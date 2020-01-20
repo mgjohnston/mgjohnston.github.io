@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Country Wines #2: Pineapples
-categories: [brewing]
+categories: [blog, brewing]
 tags: [wine, hobby]
 ---
 
