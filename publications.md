@@ -24,7 +24,7 @@ permalink: /publications/
 ### Talks and posters
 <ol>
 {% for pub in site.categories.publication %}
-  {% if pub.work-type != "poster" or pub.work-type != "oral" %}
+  {% if pub.work-type == "paper" or pub.work-type == "preprint" %}
     {% continue %}
   {% endif %}
   <li>
