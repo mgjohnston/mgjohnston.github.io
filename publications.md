@@ -13,7 +13,7 @@ permalink: /publications/
     <p>{% if pub.work-type == "preprint" %}<strong>Preprint </strong>{% endif %}{{ pub.ref-title}} ({{ pub.ref-year}})</p>
     <p>{{ pub.ref-authors | markdownify }}</p>
     <p><em>{{ pub.ref-journal}}</em> {{ pub.ref-vol}} <a href="https://doi.org/{{ pub.ref-doi}}">{{ pub.ref-doi}}</a></p>
-    {% if pub.preprint-doi != "NA" and pub.work-type != "preprint" %}<p>Originally a <a href="https://doi.org/{{ pub.preprint-doi}}">preprint</a>.</p>{% endif %}
+    <p> <a href="{{ site.baseurl }}{{ post.url }}">Abstract</a> {% if pub.preprint-doi != "NA" and pub.work-type != "preprint" %} Originally a <a href="https://doi.org/{{ pub.preprint-doi}}">preprint</a>.{% endif %}</p>
   </li>
 {% endfor %}
 </ol>
