@@ -12,9 +12,10 @@ permalink: /publications/
 <ol>
 {% for pub in site.categories.publication %}
   <li>
-    <p><strong>{{ pub.ref-title}}</strong></p>
+    <p>{% if pub.work-type == "preprint" %} Preprint {% endif %}{{ pub.ref-title}} ({{ pub.ref-year}})</p>
     <p>{{ pub.ref-authors | markdownify }}</p>
     <p><em>{{ pub.ref-journal}}</em> {{ pub.ref-vol}} <a href="https://doi.org/{{ pub.ref-doi}}">{{ pub.ref-doi}}</a></p>
+    {% if preprint-doi != "NA" %}<p>Originally a [preprint](https://doi.org/{{ pub.preprint-doi }})</p>{% endif %}
   </li>
 {% endfor %}
 </ol>
