@@ -18,14 +18,14 @@ avatar: data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMVF
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: matthew.johnston@jic.ac.uk
   facebook:
   flickr:
   github: mgjohnston
   instagram:
   linkedin:
   pinterest:
-  rss: # just type anything here for a working RSS icon
+  rss: rss
   twitter: mattjstn
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
