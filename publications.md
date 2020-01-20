@@ -22,7 +22,7 @@ permalink: /publications/
 
 ### Other Publications
 
-<ol>
+<ol markdown="1">
   <li>
     <p> Plant Cell Connections (2020) </p>
     <p> **Johnston MG** </p>
