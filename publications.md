@@ -12,8 +12,8 @@ permalink: /publications/
 <ol>
 {% for pub in site.categories.publication %}
   <li>
-    <p><strong>{{ pub.ref-title }}</strong></p>
-    <p>{{ pub.ref-authors}}</p>
+    <p><strong>{{ pub.ref-title}}</strong></p>
+    <p>{{ pub.ref-authors | markdownify }}</p>
     <p><em>{{ pub.ref-journal}}</em> {{ pub.ref-vol}} <a href="https://doi.org/{{ pub.ref-doi}}">{{ pub.ref-doi}}</a></p>
   </li>
 {% endfor %}
