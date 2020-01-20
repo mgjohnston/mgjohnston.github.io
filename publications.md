@@ -19,14 +19,14 @@ permalink: /publications/
   </li>
 {% endfor %}
 </ol>
+
 ### Other Publications
 
 <ol>
   <li>
-    <p>Plant Cell Connections (2020)</p>
-    <p>**Johnston MG**</p>
-    <p>_Biological Sciences Review_ 32(4)</p>
-    {% if pub.preprint-doi != "NA" And pub.work-type != "preprint" %}<p>Originally a <a href="https://doi.org/{{ pub.preprint-doi}}">preprint</a>.</p>{% endif %}
+    <p> Plant Cell Connections (2020) </p>
+    <p> **Johnston MG** </p>
+    <p> _Biological Sciences Review_ 32(4) </p>
   </li>
 </ol>
 
