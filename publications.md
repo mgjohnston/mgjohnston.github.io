@@ -11,8 +11,11 @@ permalink: /publications/
 ### Academic Publications
 
 1. **Does Evolutionary History Correlate with Contemporary Extinction Risk by Influencing Range Size Dynamics?**
+
 Tanentzap AJ, Igea J, **Johnston MG**, Larcombe MJ
+
 _The American Naturalist_, 195 3. [10.1086/707207](https://doi.org/10.1086/707207)
+
 PDF [Preprint](https://doi.org/10.1101/152215)
 
 2. **Anion channel SLAH3 is a regulatory target of chitin receptor-associated kinase PBL27 in microbial stomatal closure** (Open access)
