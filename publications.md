@@ -3,8 +3,6 @@ layout: page
 title: Publications
 permalink: /publications/
 ---
-{::options parse_block_html="true" /}
-
 
 [ORCiD](https://orcid.org/0000-0003-1141-6135) [Google Scholar](https://scholar.google.co.uk/citations?user=nliFYiAAAAAJ) 
 
@@ -23,21 +21,9 @@ permalink: /publications/
 ### Other Publications
 <ol>
   <li>
-    <p>
-      
-      Plant Cell Connections (2020)
-      
-    </p>
-    <p> 
-      
-      **Johnston MG**
-      
-    </p>
-    <p>
-      
-      _Biological Sciences Review_ 32(4)
-      
-    </p>
+    <p> Plant Cell Connections (2020) </p>
+    <p> <strong> Johnston MG </strong> </p>
+    <p> <em> Biological Sciences Review </em> 32(4) </p>
   </li>
 </ol>
 
