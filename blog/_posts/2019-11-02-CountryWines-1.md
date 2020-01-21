@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Country Wines \#1\: Pears
+title: Country Wines (1) - Pears
 categories: [brewing]
 tags: [wine, hobby]
 ---
