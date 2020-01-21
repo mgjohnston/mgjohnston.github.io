@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Country Wines 2 Pineapples
+title: Country Wines #2: Pineapples
 categories: [brewing]
 tags: [wine, hobby]
 ---
 
-Afer a roaring success, or rather learning experience of [perry and mead](test), it is time for more homebrew.
+Afer a roaring success, or rather learning experience of [perry and mead](CountryWines-1/), it is time for more homebrew.
 
 ### Pineapple Wine
 
