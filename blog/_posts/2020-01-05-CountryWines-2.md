@@ -5,7 +5,7 @@ categories: [brewing]
 tags: [wine, hobby]
 ---
 
-Afer a roaring success, or rather learning experience of [perry and mead]({% post_url 2019-11-02-CountryWines-1.md %}), it is time for more homebrew.
+Afer a roaring success, or rather learning experience of [perry and mead](test), it is time for more homebrew.
 
 ### Pineapple Wine
 
