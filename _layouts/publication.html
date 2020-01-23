@@ -8,6 +8,7 @@ layout: default
   <div class="entry">
     <p>{{ page.ref-authors | markdownify }}</p>
     <p><em>{{ page.ref-journal}}</em> {{ page.ref-vol}} <a href="https://doi.org/{{ page.ref-doi}}">{{ page.ref-doi}}</a></p>
+    {% if page.pdf-link != "" %}<p><a href={{ page.pdf-link}}>PDF</a></p>{% endif %}
     <h3> Abstract </h3>
       {{ content }}
     {% if page.preprint-doi != "NA" and page.work-type != "preprint" %}<p>Originally a <a href="https://doi.org/{{ page.preprint-doi}}">preprint</a>.</p>{% endif %}
