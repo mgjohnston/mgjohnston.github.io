@@ -8,7 +8,7 @@ ref-authors: Tanentzap AJ, Igea J, **Johnston MG**, Larcombe MJ
 ref-year: 2020
 ref-title: Does Evolutionary History Correlate with Contemporary Extinction Risk by Influencing Range Size Dynamics?
 ref-journal: The American Naturalist
-ref-vol: 195(3)
+ref-vol: 195(3):569–76
 ref-doi: 10.1086/707207
 preprint-doi: 10.1101/152215
 pdf-link: publication/pdf/Tanentzap2019AmNat.pdf
