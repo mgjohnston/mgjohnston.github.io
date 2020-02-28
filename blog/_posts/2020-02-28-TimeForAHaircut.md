@@ -54,5 +54,6 @@ waitTimesNoWant<-apply(barbers[barbers$Var5==F,], 1, returnWait)
 waitTimes <- c(waitTimesWant,waitTimesNoWant,waitTimesNoWant,waitTimesNoWant)
 
 mean(waitTimes)
-hist(waitTimes) ```
+hist(waitTimes) 
+```
 
