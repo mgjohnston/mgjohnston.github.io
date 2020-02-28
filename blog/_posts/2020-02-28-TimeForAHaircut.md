@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 538 Riddler Can You Get A Haircut Already?  
+title: 538 Riddler - Can You Get A Haircut Already?  
 categories: [coding]
 tags: [538riddler, R]
 ---
