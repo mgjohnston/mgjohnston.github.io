@@ -20,40 +20,39 @@ What is the expected wait time for getting a haircut from Tiffany?
 
 ### The Answer
 
-14.2 minutes
-
-### The Logic
-
-
+14 minutes 3 seconds. 
 
 ### The Code
 
   ```R
-  returnWait <- function(x){
-  tiffany<- unlist(x[1])
-  barber<- unlist(x[2:4])
-  tiffanyWanted <- unlist(x[5])
+  set.seed(1)
+waitTime<-function(){
+  tiffany<- runif(1)*15
+  barber<- runif(3)*15
+  tiffanyWanted <- sample(c(T,F,F,F),1)
+  
   if (tiffanyWanted){
     time <- tiffany + 15
   }
-  else{
+  else(
     if (all(tiffany < barber)){
       time <- tiffany + 15
     }
     else{
       time <- tiffany
+      
     }
-  }
+  )
   return(time)
 }
-
-barbers<-as.data.frame(expand.grid(1:15, 1:15, 1:15, 1:15, c(F,T)))
-
-waitTimesWant<-apply(barbers[barbers$Var5==T,], 1, returnWait)
-waitTimesNoWant<-apply(barbers[barbers$Var5==F,], 1, returnWait)
-
-waitTimes <- c(waitTimesWant,waitTimesNoWant,waitTimesNoWant,waitTimesNoWant)
-
-mean(waitTimes)
-hist(waitTimes) 
+meanWait <- NULL
+for(j in 1:1000){
+waitTimed<-NULL
+for (i in 1:1000){
+  waitTimed<-rbind(waitTimed,waitTime())
+}
+meanWait<-c(meanWait,mean(waitTimed))
+}
+mean(meanWait)
+hist(meanWait)
 ```
