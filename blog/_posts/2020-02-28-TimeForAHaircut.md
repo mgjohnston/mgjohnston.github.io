@@ -4,8 +4,6 @@ title: 538 Riddler - Can You Get A Haircut Already?
 categories: [coding]
 tags: [538riddler, R]
 ---
-### The Riddle
-
 From Dave Moran comes a question we’ve all faced at some point when waiting in line for a haircut:
 
 At your local barbershop, there are always four barbers working simultaneously. Each haircut takes exactly 15 minutes, and there’s almost always one or more customers waiting their turn on a first-come, first-served basis.
@@ -17,6 +15,7 @@ Unfortunately, you’re not alone in requesting Tiffany — a quarter of the oth
 One Friday morning, you arrive at the barber shop to see that all four barbers are cutting hair, and there is one customer waiting. You have no idea how far along any of the barbers is in their haircuts, and you don’t know whether or not the customer in line will hold out for Tiffany.
 
 What is the expected wait time for getting a haircut from Tiffany?
+
 <https://fivethirtyeight.com/features/can-you-get-a-haircut-already/>
 
 ### The Answer
@@ -24,6 +23,8 @@ What is the expected wait time for getting a haircut from Tiffany?
 14.2 minutes
 
 ### The Logic
+
+
 
 ### The Code
 
