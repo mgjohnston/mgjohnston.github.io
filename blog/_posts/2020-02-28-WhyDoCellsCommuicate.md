@@ -4,7 +4,7 @@ title: Why do cells communicate?
 categories: [science]
 tags: [plasmodesmata]
 ---
-##Multicellularity: how and why cells communicate
+## Multicellularity: how and why cells communicate
 
 Roughly 600 million years ago, the first multicellular organism evolved from single-celled life.
 
@@ -20,7 +20,7 @@ Transport is required for the movement of resources around a multi-cellular orga
 
 ![Plant cells 'communicating']({{ site.baseurl }}/images/CommFig2.png)
 
-##How plant cells achieve communication
+## How plant cells achieve communication
 
 Much like their animal counterparts plant cells communicate in a multitude of ways, from chemical to electrical.
 
@@ -38,7 +38,7 @@ Plasmodesmata can be used for both transport and communication and often these a
 
 Interestingly, movement through plasmodesmata can be coupled with movement by transporters, simultaneously as has recently been shown to be the case with auxin.
 
-##Communication in defence
+## Communication in defence
 In the Faulkner lab, we explore how plasmodesmata function in plant defence.
 
 When a plant cell comes under attack the plasmodesmata shut, closing the channels between plant cells. This has a knock-on effect, changing the communication between cells. We have recently published a paper exploring what proteins are involved in this process, and how the plant becomes more susceptible to pathogens when this process is interrupted.
