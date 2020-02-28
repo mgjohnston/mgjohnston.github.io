@@ -27,7 +27,7 @@ What is the expected wait time for getting a haircut from Tiffany?
 
 ### The Code
 
-  `returnWait <- function(x){
+  ` returnWait <- function(x){
   tiffany<- unlist(x[1])
   barber<- unlist(x[2:4])
   tiffanyWanted <- unlist(x[5])
@@ -53,5 +53,5 @@ waitTimesNoWant<-apply(barbers[barbers$Var5==F,], 1, returnWait)
 waitTimes <- c(waitTimesWant,waitTimesNoWant,waitTimesNoWant,waitTimesNoWant)
 
 mean(waitTimes)
-hist(waitTimes)`
+hist(waitTimes) `
 
