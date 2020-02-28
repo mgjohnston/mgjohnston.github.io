@@ -4,6 +4,8 @@ title: Why do cells communicate?
 categories: [science]
 tags: [plasmodesmata]
 ---
+This blog was written by me for JIC Communications and is reproduced here.
+
 ## Multicellularity: how and why cells communicate
 
 Roughly 600 million years ago, the first multicellular organism evolved from single-celled life.
@@ -47,6 +49,6 @@ Lastly, not all communication has to be by small molecules and over short distan
 
 Plants, like animals, also use electrical signalling to transmit information over long distances very rapidly. For example, when a plant is wounded, say by a snail, rapid waves of calcium and electricity are sent along the plant to alert distant leaves that they may soon be eaten too. This, in turn elicits defence compounds to be made in leaves far away from the invader in preparation in an attempt to stave off further attack.
 
-We may not hear it, but cells are constantly communicating to keep the plant alive. 
-
 ![Graphical examples of how plant cells communicate]({{ site.baseurl }}/images/CommFig3.png)
+
+We may not hear it, but cells are constantly communicating to keep the plant alive. 
