@@ -14,7 +14,7 @@ Beyond my PhD, I require a strong understanding of Python, the Django framework,
 
 ### Site
 
-Here, is an archive of my [scietific publications]({% link /publications/ %}) with free-to-access PDFs of all the works I am assoicated with. As well as a collection of [posts]({% link / %}) about hobbies, from statistical riddles to homebrew.
+Here, is an archive of my [scietific publications]({% link publications/ %}) with free-to-access PDFs of all the works I am assoicated with. As well as a collection of [posts]({% link site.url %}) about hobbies, from statistical riddles to homebrew.
 
 ### Contact me
 
