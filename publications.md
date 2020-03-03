@@ -44,6 +44,11 @@ permalink: /publications/
 ### Other Publications
 <ol>
   <li>
+    <p> Cell-to-cell Communication (2020) </p>
+    <p> <strong> Johnston MG </strong> </p>
+    <p> <a href="#">John Innes Centre Communications Blog</a> reproduced <a href="{{ site.base-url}}/WhyDoCellsCommuicate/">here</a>.</p>
+  </li>
+  <li>
     <p> Plant Cell Connections (2020) </p>
     <p> <strong> Johnston MG </strong> </p>
     <p> <em> Biological Sciences Review </em> 32(4) </p>
@@ -57,4 +62,4 @@ permalink: /publications/
 </ol>
 
 
-Correct as of 20/01/2020.
+Correct as of 01/03/2020.
