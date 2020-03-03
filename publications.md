@@ -44,7 +44,7 @@ permalink: /publications/
 ### Other Publications
 <ol>
   <li>
-    <p> Cell-to-cell Communication (2020) </p>
+    <p> Why do cells communicate? (2020) </p>
     <p> <strong> Johnston MG </strong> </p>
     <p> <a href="#">John Innes Centre Communications Blog</a> reproduced <a href="{{ site.base-url}}/WhyDoCellsCommuicate/">here</a>.</p>
   </li>
