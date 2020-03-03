@@ -16,7 +16,7 @@ Here's a copy of my [one-page CV](../JohnstonCV.pdf).
 
 ### Site
 
-Here, is an archive of my [scietific publications](../publications/) with free-to-access PDFs of all the works I am assoicated with. As well as a collection of [posts](../) about hobbies, from statistical riddles to homebrew.
+Here, is an archive of my [scientific publications](../publications/) with free-to-access PDFs of all the works I am assoicated with. As well as a collection of [posts](../) about hobbies, from statistical riddles to homebrew.
 
 ### Contact me
 
