@@ -4,7 +4,7 @@ title: Why do cells communicate?
 categories: [science]
 tags: [plasmodesmata]
 ---
-This blog was written by me for JIC Communications and is reproduced here.
+This blog was written by me for [JIC Communications](#) and is reproduced here.
 
 ## Multicellularity: how and why cells communicate
 
@@ -43,7 +43,7 @@ Interestingly, movement through plasmodesmata can be coupled with movement by tr
 ## Communication in defence
 In the Faulkner lab, we explore how plasmodesmata function in plant defence.
 
-When a plant cell comes under attack the plasmodesmata shut, closing the channels between plant cells. This has a knock-on effect, changing the communication between cells. We have recently published a paper exploring what proteins are involved in this process, and how the plant becomes more susceptible to pathogens when this process is interrupted.
+When a plant cell comes under attack the plasmodesmata shut, closing the channels between plant cells. This has a knock-on effect, changing the communication between cells. We have recently [published a paper]({{ site.baseurl }}/LYMLYK/) exploring what proteins are involved in this process, and how the plant becomes more susceptible to pathogens when this process is interrupted.
 
 Lastly, not all communication has to be by small molecules and over short distances.
 
