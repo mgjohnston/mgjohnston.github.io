@@ -4,7 +4,8 @@ title: 	Chitin perception in plasmodesmata characterises submembrane immune sign
 categories: publication
 
 work-type: paper
-ref-authors: Cheval C\*, Samwald S\*, **Johnston MG\***,  de Keijzer J, Breakspear A, Liu X, Bellandi A, Kadota Y, Zipfel C, Faulkner C \n \*These authors contributed equally to this work.
+ref-authors: Cheval C\*, Samwald S\*, **Johnston MG\***,  de Keijzer J, Breakspear A, Liu X, Bellandi A, Kadota Y, Zipfel C, Faulkner C  
+\*These authors contributed equally to this work.
 ref-year: 2020
 ref-title: 	Chitin perception in plasmodesmata characterises submembrane immune signalling specificity in plants
 ref-journal: PNAS
