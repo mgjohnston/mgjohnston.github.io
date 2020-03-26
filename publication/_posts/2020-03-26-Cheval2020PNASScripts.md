@@ -16,3 +16,5 @@ pdf-link: #
 Archive of scripts used in Cheval, Samwald, Johnston, et al., PNAS (2020).
 
 Also found at <https://github.com/faulknerfalcons/Cheval-2020-PNAS>.
+
+[![DOI](https://zenodo.org/badge/250227086.svg)](https://zenodo.org/badge/latestdoi/250227086)
