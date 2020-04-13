@@ -4,7 +4,7 @@ title: faulknerfalcons/Cheval-2020-PNAS Analysis Scripts for Cheval, Samwald, Jo
 categories: publication
 
 work-type: paper
-ref-authors: **Johnston MG**, Faulkner C
+ref-authors:  **Johnston MG**, Faulkner C
 ref-year: 2020
 ref-title: faulknerfalcons/Cheval-2020-PNAS Analysis Scripts for Cheval, Samwald, Johnston, et al., 2020, PNAS
 ref-journal: Zenodo
