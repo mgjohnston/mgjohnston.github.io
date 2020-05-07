@@ -4,7 +4,7 @@ title: Why do cells communicate?
 categories: [science]
 tags: [plasmodesmata]
 ---
-This blog was written by me for [JIC Communications](#) and is reproduced here.
+This blog was written by me for [JIC Communications](https://www.jic.ac.uk/blog/multicellularity-how-and-why-cells-communicate/) and is reproduced here.
 
 ## Multicellularity: how and why cells communicate
 
