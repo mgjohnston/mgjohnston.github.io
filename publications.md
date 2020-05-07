@@ -46,7 +46,7 @@ permalink: /publications/
   <li>
     <p> Why do cells communicate? (2020) </p>
     <p> <strong> Johnston MG </strong> </p>
-    <p> <a href="#">John Innes Centre Communications Blog</a> reproduced <a href="{{ site.base-url}}/WhyDoCellsCommuicate/">here</a>.</p>
+    <p> <a href="https://www.jic.ac.uk/blog/multicellularity-how-and-why-cells-communicate/">John Innes Centre Communications Blog</a> reproduced <a href="{{ site.base-url}}/WhyDoCellsCommuicate/">here</a>.</p>
   </li>
   <li>
     <p> Plant Cell Connections (2020) </p>
@@ -62,4 +62,4 @@ permalink: /publications/
 </ol>
 
 
-Correct as of 01/03/2020.
+Correct as of 01/05/2020.
