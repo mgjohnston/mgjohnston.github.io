@@ -8,7 +8,7 @@ ref-authors: Cheval C\*, Samwald S\*, **Johnston MG\***,  de Keijzer J, Breakspe
 ref-year: 2020
 ref-title: 	Chitin perception in plasmodesmata characterises submembrane immune signalling specificity in plants
 ref-journal: PNAS
-ref-vol: Early
+ref-vol: 117(17):9621-29
 ref-doi: 10.1073/pnas.1907799117
 preprint-doi: 10.1101/611582
 pdf-link: publication/pdf/Cheval2020PNAS.pdf
