@@ -51,7 +51,7 @@ permalink: /publications/
   <li>
     <p> Plant Cell Connections (2020) </p>
     <p> <strong> Johnston MG </strong> </p>
-    <p> <em> Biological Sciences Review </em> 32(4) </p>
+    <p> <em> Biological Sciences Review </em> 32(4):22-25 </p>
   </li>
   <li>
     <p> International Biology Olympiad Theory Papers (2017) </p>
