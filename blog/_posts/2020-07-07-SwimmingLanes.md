@@ -18,7 +18,7 @@ Following each of the possibilities of the first choice:
 
 -One from edge (2/5). Has only two person solutions (1).
 
-Summing these together: 1/5(2*2*1/3 + 2*3*2/3 + 1*3 + 2*2) = 37/15
+Summing these together: 1/5(2&#215;2&#215;1/3 + 2&#215;3&#215;2/3 + 1&#215;3 + 2&#215;2) = 37/15
 
 
 ## Riddler Express
