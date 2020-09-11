@@ -4,7 +4,7 @@ title: A bootstrap approach is a superior statistical method for the comparison 
 categories: publication
 
 work-type: preprint
-ref-authors: **Johnston MG**, Faulkner C
+ref-authors: '**Johnston MG**, Faulkner C'
 ref-year: 2020
 ref-title: A bootstrap approach is a superior statistical method for the comparison of cell-to-cell movement data
 ref-journal: bioRxiv
