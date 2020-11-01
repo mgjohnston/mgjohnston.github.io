@@ -48,11 +48,21 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">British Biology Olympiad</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#faq">FAQs</a></li>
+          <li class="drop-down active"><a href="index.html">British Biology Olympiad</a>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#faq">FAQs</a></li>
+              <li><a href="#signup">Sign up</a></li>
+            </ul>
+          </li>
+          <li class="drop-down"><a href="biologychallenge.html">Biology Challenge</a>
+            <ul>
+              <li><a href="biologychallenge.html#about">About</a></li>
+              <li><a href="biologychallenge.html#faq">FAQs</a></li>
+              <li><a href="biologychallenge.html#signup">Sign up</a></li>
+            </ul>
+          </li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="biologychallenge.html">Biology Challenge</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -255,66 +265,14 @@
 
         <div class="section-title">
           <h2>Sign Up for BBO 2021</h2>
-          <p>Fill in the form below to sign your school up for BBO 2021. Please note only teachers can sign their students up for BBO 2021. If this is your first time participating, we will verify that you are a member of staff.</p>
+          <p>Fill in the Google form  to sign your school up for BBO 2021. Please note only teachers can sign their students up for BBO 2021. If this is your first time participating, we will verify that you are a member of staff.</p>
 		  <p>This year we can provide the competition for free in celebration of our 25th birthday and in contingency for schools closing due to COVID19.</p>
 		  <p>We are in the process of updating our exam system and will e-mail you teacher and student instructions in early 2021.</p>
-        </div>
+      <form class="signup php-email-form " action="https://google.com">
+        <button type="submit">Register for BBO2021</button>
+    </form>    
+    </div>
 
-        <div class="row mt-5 justify-content-center">
-
- 
-          <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="form-row-4">
-                <div class="col-md form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 characters" />
-                  <div class="validate"></div>
-                </div>
-                <div class="col-md form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your School Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
-                </div>
-              </div>
-              <div class="col-md form-group">
-                <input type="text" class="form-control" name="school" id="school" placeholder="School Name" data-rule="minlen:5" data-msg="Please enter at least 5 characters" />
-                <div class="validate"></div>
-              </div>
-			  <div class="form-group">
-				<div class="custom-control custom-radio custom-control-inline">
-					<input type="radio" class="custom-control-input" id="customRadio" name="example" value="customEx" required>
-					<label class="custom-control-label" for="customRadio">UK School</label>
-				  </div>
-				  <div class="custom-control custom-radio custom-control-inline">
-					<input type="radio" class="custom-control-input" id="customRadio2" name="example" value="customEx" required>
-					<label class="custom-control-label" for="customRadio2">Overseas School</label>
-				 </div> 
-			  <div class="validate"></div>
-              </div>
-              <div class="form-group">
-				<div class="custom-control custom-checkbox">
-					<input type="checkbox" class="custom-control-input" id="defaultUnchecked" data-msg="Before you wreck yourself" data-rule="required" >
-					<label class="custom-control-label" for="defaultUnchecked">I consent to my data being stored and used by UKBC for the purposes of BBO2021 as set out in the <a href="privacy.html">privacy policy</a></label>
-					<div class="validate"></div>
-              </div>
-			  <div class="form-group">
-				<div class="custom-control custom-checkbox">
-					<input type="checkbox" class="custom-control-input" id="defaultUnchecked2">
-					<label class="custom-control-label" for="defaultUnchecked2">I consent to my data being stored and used by UKBC to remind me about future biology competitions as set out in the <a href="privacy.html">privacy policy</a></label>
-				</div>
-			  <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Sign Up</button></div>
-            </form>
-
-          </div>
-
-        </div>
 
       </div>
     </section><!-- End Contact Section -->
