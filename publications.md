@@ -3,7 +3,8 @@ layout: page
 title: Publications
 permalink: /publications/
 ---
-
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 [ORCiD](https://orcid.org/0000-0003-1141-6135) [Google Scholar](https://scholar.google.co.uk/citations?user=nliFYiAAAAAJ) 
 
 ### Academic Publications
@@ -18,7 +19,7 @@ permalink: /publications/
     <p><em>{{ pub.ref-journal}}</em> {{ pub.ref-vol}} <a href="https://doi.org/{{ pub.ref-doi}}">{{ pub.ref-doi}}</a></p>
     {% if pub.preprint-doi != "NA" and pub.work-type != "preprint" %}<p>Originally a <a href="https://doi.org/{{ pub.preprint-doi}}">preprint</a>.</p>{% endif %}
     <div class='altmetric-embed' data-badge-type='donut' data-doi="{{ pub.ref-doi}}" style="float: left;width: 100px;" data-hide-no-mentions="true"></div>
-    <span class="__dimensions_badge_embed__" data-doi="{{ pub.ref-doi}}" data-style="small_circle"></span>
+    <span class="__dimensions_badge_embed__" data-doi="{{ pub.ref-doi}}" data-style="small_circle" data-hide-zero-citations="true"></span>
     <br />
   </li>
 {% endfor %}
@@ -66,5 +67,3 @@ permalink: /publications/
 
 
 Correct as of 13/01/2021.
-<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
