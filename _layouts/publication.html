@@ -14,8 +14,9 @@ layout: default
     {% if page.preprint-doi != "NA" and page.work-type != "preprint" %}<p>Originally a <a href="https://doi.org/{{ page.preprint-doi}}">preprint</a>.</p>{% endif %}
   </div>
   
-  <div class='altmetric-embed' data-badge-type='donut' data-doi="{{ page.ref-doi}}"></div>
-  <span class="__dimensions_badge_embed__" data-doi="{{ page.ref-doi}}"></span>
+  <div class='altmetric-embed' data-badge-type='donut' data-doi="{{ page.ref-doi}}">
+  <span class="__dimensions_badge_embed__" data-doi="{{ page.ref-doi}} data-style="small_circle""></span>
+  </div>
   <div class="date">
     Published on {{ page.date | date: "%B %e, %Y" }}
   </div>
