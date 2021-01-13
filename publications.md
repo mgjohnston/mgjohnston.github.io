@@ -17,6 +17,9 @@ permalink: /publications/
     <p>{{ pub.ref-authors | markdownify }}</p>
     <p><em>{{ pub.ref-journal}}</em> {{ pub.ref-vol}} <a href="https://doi.org/{{ pub.ref-doi}}">{{ pub.ref-doi}}</a></p>
     {% if pub.preprint-doi != "NA" and pub.work-type != "preprint" %}<p>Originally a <a href="https://doi.org/{{ pub.preprint-doi}}">preprint</a>.</p>{% endif %}
+    <div class='altmetric-embed' data-badge-type='donut' data-doi="{{ page.ref-doi}}" style="float: left;width: 100px;"></div>
+    <span class="__dimensions_badge_embed__" data-doi="{{ page.ref-doi}}" data-style="small_circle""></span>
+    <br />
   </li>
 {% endfor %}
 </ol>
@@ -63,3 +66,5 @@ permalink: /publications/
 
 
 Correct as of 13/01/2021.
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
