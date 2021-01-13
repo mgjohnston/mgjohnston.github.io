@@ -14,8 +14,8 @@ layout: default
     {% if page.preprint-doi != "NA" and page.work-type != "preprint" %}<p>Originally a <a href="https://doi.org/{{ page.preprint-doi}}">preprint</a>.</p>{% endif %}
   </div>
   
-  <div class='altmetric-embed' data-badge-type='donut' data-doi="page.ref-doi"></div>
-  
+  <div class='altmetric-embed' data-badge-type='donut' data-doi="{{ page.ref-doi}}"></div>
+  <span class="__dimensions_badge_embed__" data-doi="{{ page.ref-doi}}"></span>
   <div class="date">
     Published on {{ page.date | date: "%B %e, %Y" }}
   </div>
@@ -23,3 +23,4 @@ layout: default
   {% include disqus.html %}
 </article>
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
