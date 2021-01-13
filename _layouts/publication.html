@@ -13,10 +13,13 @@ layout: default
       {{ content }}
     {% if page.preprint-doi != "NA" and page.work-type != "preprint" %}<p>Originally a <a href="https://doi.org/{{ page.preprint-doi}}">preprint</a>.</p>{% endif %}
   </div>
-
+  
+  <div class='altmetric-embed' data-badge-type='donut' data-doi="page.ref-doi"></div>
+  
   <div class="date">
     Published on {{ page.date | date: "%B %e, %Y" }}
   </div>
 
   {% include disqus.html %}
 </article>
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
