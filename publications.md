@@ -3,8 +3,6 @@ layout: page
 title: Publications
 permalink: /publications/
 ---
-<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
-<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
 [ORCiD](https://orcid.org/0000-0003-1141-6135) [Google Scholar](https://scholar.google.co.uk/citations?user=nliFYiAAAAAJ) 
 
 ### Academic Publications
@@ -67,3 +65,5 @@ permalink: /publications/
 
 
 Correct as of 13/01/2021.
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
