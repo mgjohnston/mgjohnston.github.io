@@ -18,7 +18,7 @@ permalink: /publications/
     <p><em>{{ pub.ref-journal}}</em> {{ pub.ref-vol}} <a href="https://doi.org/{{ pub.ref-doi}}">{{ pub.ref-doi}}</a></p>
     {% if pub.preprint-doi != "NA" and pub.work-type != "preprint" %}<p>Originally a <a href="https://doi.org/{{ pub.preprint-doi}}">preprint</a>.</p>{% endif %}
     <div class='altmetric-embed' data-badge-type='donut' data-doi="{{ pub.ref-doi}}" style="float: left;width: 100px;" data-hide-no-mentions="true"></div>
-    <span class="__dimensions_badge_embed__" data-doi="{{ pub.ref-doi}}" data-style="small_circle" data-hide-zero-citations="true"></span>
+    <span class="__dimensions_badge_embed__" data-doi="{{ pub.ref-doi}}" data-style="small_circle"></span>
     <br />
   </li>
 {% endfor %}
