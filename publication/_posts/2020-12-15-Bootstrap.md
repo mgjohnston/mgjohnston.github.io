@@ -8,7 +8,7 @@ ref-authors: '**Johnston MG**, Faulkner C'
 ref-year: 2021
 ref-title: A bootstrap approach is a superior statistical method for the comparison of non‐normal data with differing variances
 ref-journal: New Phytologist
-ref-vol: 230(1): 23-26
+ref-vol: 230(1) 23-26
 ref-doi: 10.1111/nph.17159
 preprint-doi: 10.1101/2020.09.11.292672
 pdf-link: publication/pdf/Johnston2020_accepted.pdf
