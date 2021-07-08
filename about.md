@@ -6,11 +6,11 @@ permalink: /about/
 
 ### Me
 
-I am a final year PhD student at the John Innes Centre, working in Dr Christine Faulkner's lab, and am currently looking for future opportunities.
+I have a data background working within a range of domains from genomic analysis and statistics to data management and interrogation within a Tier 1 bank.
 
-I have developed skills in big data analysis of next generation sequencing data, and advanced statistical methods with the analysis of both continuous and discrete data. This was done alongside the development of novel wet-bench protocols for the extraction and purification of plasmodesmata from mature tissue, which exemplify strong analytical and experimental abilities. 
+I hold a PhD in biology, where I worked on plant defence and published academic papers on statistics (and biology!). More recently, I worked as a data consultant within financial services, working quickly to solve Client data problems. I also Chair a charity ([United Kingdom Biology Competitions](https://ukbiologycompetitions.org/uk-biology-competitions/)), where I manage the provision of exams for over 30,000 students and 500 schools annually by a committee of volunteers.
 
-Beyond my PhD, I require a strong understanding of Python, the Django framework, and Postgres database management as the webmaster for [United Kingdom Biology Competitions](https://ukbiologycompetitions.org/uk-biology-competitions/). The website handles over 30,000 students competing in a multiple choice biology compeition in one week, which I also volunteer to write the questions for.
+During my PhD, developed skills in big data analysis of next generation sequencing data, and advanced statistical methods with the analysis of both continuous and discrete data. This was done alongside the development of novel wet-bench protocols for the extraction and purification of plasmodesmata from mature tissue, which exemplify strong analytical and experimental abilities. 
 
 Here's a copy of my [one-page CV](../JohnstonCV.pdf).
 
@@ -20,6 +20,6 @@ Here, is an archive of my [scientific publications](../publications/) with free-
 
 ### Contact me
 
-[matthew.johnston@jic.ac.uk](mailto:matthew.johnston@jic.ac.uk)
+[hello@matthew-johnston.com](mailto:hello@matthew-johnston.com)
 
-Correct as of 01/03/2020
+Correct as of 01/07/2021

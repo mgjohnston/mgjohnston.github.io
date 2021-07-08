@@ -46,6 +46,11 @@ permalink: /publications/
 ### Other Publications
 <ol>
   <li>
+    <p> The Proteins Found at Plasmodesmata and the Interactions Between Them (2021) </p>
+    <p> <strong> Johnston MG </strong> </p>
+    <p> Doctoral Thesis</p>
+  </li>
+  <li>
     <p> Why do cells communicate? (2020) </p>
     <p> <strong> Johnston MG </strong> </p>
     <p> <a href="https://www.jic.ac.uk/blog/multicellularity-how-and-why-cells-communicate/">John Innes Centre Communications Blog</a> reproduced <a href="{{ site.base-url}}/WhyDoCellsCommuicate/">here</a>.</p>
