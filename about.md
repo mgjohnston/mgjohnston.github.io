@@ -12,6 +12,8 @@ I hold a PhD in biology, where I worked on plant defence and published academic 
 
 During my PhD, developed skills in big data analysis of next generation sequencing data, and advanced statistical methods with the analysis of both continuous and discrete data. This was done alongside the development of novel wet-bench protocols for the extraction and purification of plasmodesmata from mature tissue, which exemplify strong analytical and experimental abilities. 
 
+I am also the co-founder of [Imensas Ltd](https://imensas.com/). 
+
 Here's a copy of my [one-page CV](../JohnstonCV.pdf).
 
 ### Site
