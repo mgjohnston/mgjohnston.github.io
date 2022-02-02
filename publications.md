@@ -48,7 +48,7 @@ permalink: /publications/
   <li>
     <p> The Proteins Found at Plasmodesmata and the Interactions Between Them (2021) </p>
     <p> <strong> Johnston MG </strong> </p>
-    <p> Doctoral Thesis</p>
+    <p> <a href="https://ueaeprints.uea.ac.uk/id/eprint/81897/">Doctoral Thesis</a></p>
   </li>
   <li>
     <p> Why do cells communicate? (2020) </p>
