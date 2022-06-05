@@ -4,7 +4,7 @@ title: Comparative phyloproteomics identifies conserved plasmodesmal proteins
 categories: publication
 
 work-type: preprint
-ref-authors: '**Johnston MG**, Breakspear A, Samwald S, Zhang D, Papp D, Faulkner C, de Keijzer J
+ref-authors: '**Johnston MG**, Breakspear A, Samwald S, Zhang D, Papp D, Faulkner C, de Keijzer J'
 ref-year: 2022
 ref-title: Comparative phyloproteomics identifies conserved plasmodesmal proteins
 ref-journal: bioRxiv
