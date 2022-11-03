@@ -3,7 +3,7 @@ layout: publication
 title: Diffusion and bulk flow of amino acids mediate calcium waves in plants
 categories: publication
 
-work-type: publication
+work-type: paper
 ref-authors: 'Bellandi A, Papp D, Breakspear A, Joyce J, **Johnston MG**, de Keijzer J, Raven EC, Ohtsu M, Vincent TR, Miller AJ, Sanders D, Hogenhout SA, Morris RJ, Faulkner C'
 ref-year: 2022
 ref-title: Diffusion and bulk flow of amino acids mediate calcium waves in plants
