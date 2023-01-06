@@ -46,6 +46,11 @@ permalink: /publications/
 ### Other Publications
 <ol>
   <li>
+    <p> PXD038964 PRoteomics IDEntifications database (PRIDE) data sharing: Comparative phyloproteomics identifies conserved plasmodesmal proteins (2023) </p>
+    <p> <strong> Johnston MG</strong>, Faulkner C </p>
+    <p> <a href="https://www.ebi.ac.uk/pride/archive/projects/PXD038964/">PXD038964</a></p>
+  </li>
+  <li>
     <p> The Proteins Found at Plasmodesmata and the Interactions Between Them (2021) </p>
     <p> <strong> Johnston MG </strong> </p>
     <p> <a href="https://ueaeprints.uea.ac.uk/id/eprint/81897/">Doctoral Thesis</a></p>
