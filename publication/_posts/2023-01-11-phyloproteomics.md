@@ -8,8 +8,8 @@ ref-authors: '**Johnston MG**, Breakspear A, Samwald S, Zhang D, Papp D, Faulkne
 ref-year: 2023
 ref-title: Comparative phyloproteomics identifies conserved plasmodesmal proteins
 ref-journal: Journal of Experimental Botany
-ref-vol: TBC
-ref-doi: TBC
+ref-vol: Advance Articles
+ref-doi: 10.1093/JXB/ERAD022
 preprint-doi: 10.1101/2022.06.01.494363
 pdf-link: publication/pdf/Johnston2023JExpBot_Accepted.pdf
 ---
