@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Meet the writers of the competitions: British Biology Olympiad
+title: Meet the writers of the competitions - British Biology Olympiad
 categories: [charity]
 tags: [ukbc, bbo]
 ---
