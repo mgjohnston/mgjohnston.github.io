@@ -46,6 +46,11 @@ permalink: /publications/
 ### Other Publications
 <ol>
   <li>
+    <p> Meet the writers of the competitions: British Biology Olympiad (2025) </p>
+    <p> Kim Ngan Luu Hoang </p>
+    <p> <a href="https://ukbiologycompetitions.org/meet-the-writers-of-the-competitions-british-biology-olympiad/">UKBC Blog</a> reproduced <a href="{{ site.base-url}}/MeetTheWritersBBO/">here</a>. </p>
+  </li>
+  <li>
     <p> PXD038964 PRoteomics IDEntifications database (PRIDE) data sharing: Comparative phyloproteomics identifies conserved plasmodesmal proteins (2023) </p>
     <p> <strong> Johnston MG</strong>, Faulkner C </p>
     <p> <a href="https://www.ebi.ac.uk/pride/archive/projects/PXD038964/">PXD038964</a></p>
@@ -75,6 +80,6 @@ permalink: /publications/
 </ol>
 
 
-Correct as of 01/01/2024.
+Correct as of 25/03/2025.
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
