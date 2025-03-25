@@ -5,14 +5,9 @@ permalink: /about/
 ---
 
 ### Me
+I’m a technology executive focussed on retail and the customer with a background in data science, analytics, and engineering. Currently, as CTO at Jollyes, I oversee the tech infrastructure for 100+ stores, from payment systems to data insights for the board and PE investors. Previously, I led marketing data science at Sainsbury’s, personalising offers 1-2-1 to the customer to drive millions in marketing value and optimizing digital ad spend.
 
-I have a data background working within a range of domains from genomic analysis and statistics to data management and interrogation within a Tier 1 bank.
-
-I hold a PhD in biology, where I worked on plant defence and published academic papers on statistics (and biology!). More recently, I worked as a data consultant within financial services, working quickly to solve Client data problems. I also Chair a charity ([United Kingdom Biology Competitions](https://ukbiologycompetitions.org/uk-biology-competitions/)), where I manage the provision of exams for over 30,000 students and 500 schools annually by a committee of volunteers.
-
-During my PhD, developed skills in big data analysis of next generation sequencing data, and advanced statistical methods with the analysis of both continuous and discrete data. This was done alongside the development of novel wet-bench protocols for the extraction and purification of plasmodesmata from mature tissue, which exemplify strong analytical and experimental abilities. 
-
-I am also the co-founder of [Imensas Ltd](https://imensas.com/). 
+I hold a PhD in Biology from the John Innes Centre, where I worked on big data analysis and statistical modeling ([open access papers here](../publications/)). I've recently finished volunteering at [United Kingdom Biology Competitions](https://ukbiologycompetitions.org/) after 10 years (5 of which as Chair). We provided biology exams for 70,000+ students and 1,000+ schols annually. I'm actively seeking new volunteering opportunities for the public benefit, so if you need education, technology, retail, biology, or data experience please reach out. 
 
 Here's a copy of my [one-page CV](../JohnstonCV.pdf).
 
@@ -24,4 +19,4 @@ Here, is an archive of my [scientific publications](../publications/) with free-
 
 [hello@matthew-johnston.com](mailto:hello@matthew-johnston.com)
 
-Correct as of 01/07/2021
+Correct as of 01/03/2025
