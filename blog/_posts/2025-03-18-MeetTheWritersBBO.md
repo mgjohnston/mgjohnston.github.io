@@ -4,7 +4,7 @@ title: Meet the writers of the competitions - British Biology Olympiad
 categories: [charity]
 tags: [ukbc, bbo]
 ---
-This blog was written by Kim Ngan Luu Hoang for [UKBC](https://ukbiologycompetitions.org/meet-the-writers-of-the-competitions-british-biology-olympiad/) and is reproduced here.
+This blog was written by Kim Ngan Luu Hoang for [UKBC]([https://ukbiologycompetitions.org/meet-the-writers-of-the-competitions-british-biology-olympiad/](https://web.archive.org/web/20250324221422/https://ukbiologycompetitions.org/meet-the-writers-of-the-competitions-british-biology-olympiad/) and is reproduced here.
 
 ![Dr Matthew Johnston (left) and Dr Joshua Hodgson (right)]({{ site.baseurl }}/images/joshmatt1.jpeg)
 
