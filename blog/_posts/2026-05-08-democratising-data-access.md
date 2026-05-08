@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "Democratising data access with Claude.ai: how we are replacing BI"
+title: "Building a Stateful Retail Analyst with Claude and MCP"
 categories: [ai]
 tags: [claude, mcp, llm, bi, jollyes]
 ---
-*Notes from building a stateful personal analyst at Jollyes Pets on a $10/month VM*
+*NHow we are changing BI at Jollyes Pets on a $10/month VM*
 
 > "Is Uber performing well?"
 
 That's the kind of question Jollyes managers now drop into Claude.ai and get a defensible answer to in under a minute - without an analyst, nor a dashboard, yet with the right business logic attached.
 
-Our Claude.ai tennant can SSO into a read-only MCP server I deployed alongside a daily Snowflake export. It has been shockingly effective at drawing together disparate data sources into coherent analyses across our retail domain, and has let colleagues at every level interact with our data in real time without waiting for BI or analyst capacity to come free.
+Our Claude.ai tenant can SSO into a read-only MCP server I deployed alongside a daily Snowflake export. It has been remarkably effective at drawing together disparate data sources into coherent analyses across our retail domain, and has let colleagues at every level interact with our data in real time without waiting for BI or analyst capacity.
 
 The solution is secure, cheap to run, and, most importantly, accurate from both a SQL and a business perspective.
 
