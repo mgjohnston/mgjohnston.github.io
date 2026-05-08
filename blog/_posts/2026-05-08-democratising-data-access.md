@@ -97,7 +97,7 @@ Context window size can be a red herring. The real question isn't how much data 
 
 > What is the smallest set of high-signal tokens required at the exact moment the model needs them?
 
-Most MCP servers I've seen are effecmderused in the MCP ecosystem so far.
+Most MCP servers I’ve seen are effectively stateless - each tool call independent of the last. The curriculum here only works because the server holds per-session state: which tables have been described, which are still locked, what’s in scope. That’s not exotic - it’s a Map<sessionId, Set<tableName>> - but it unlocks a class of behaviour you can’t get from stateless tool servers: curriculum enforcement, progressive disclosure, multi-step transactions. I think this is underused in the MCP ecosystem so far.
 
 ## Open questions we’re talking about:
 
