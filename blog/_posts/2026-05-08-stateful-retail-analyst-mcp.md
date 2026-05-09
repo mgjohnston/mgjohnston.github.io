@@ -4,15 +4,15 @@ title: "Building a Stateful Retail Analyst with Claude and MCP"
 categories: [ai]
 tags: [claude, mcp, llm, bi, jollyes]
 ---
-*NHow we are changing BI at Jollyes Pets on a $10/month VM*
+*How we are changing BI at Jollyes Pets on a $10/month VM*
 
 > "Is Uber performing well?"
 
-That's the kind of question Jollyes managers now drop into Claude.ai and get a defensible answer to in under a minute - without an analyst, nor a dashboard, yet with the right business logic attached.
+That's the kind of question Jollyes managers now drop into Claude.ai and get a nuanced report back in under a minute - without an analyst, nor a dashboard, yet with the right business logic attached.
 
 Our Claude.ai tenant can SSO into a read-only MCP server I deployed alongside a daily Snowflake export. It has been remarkably effective at drawing together disparate data sources into coherent analyses across our retail domain, and has let colleagues at every level interact with our data in real time without waiting for BI or analyst capacity.
 
-The solution is secure, cheap to run, and, most importantly, accurate from both a SQL and a business perspective.
+I employed the stateful nature of MCPs to gate data access behind enforced data discovery. This leads to responses which are grounded in business truth and real data.
 
 ## The stack
 
@@ -31,7 +31,7 @@ Daily Snowflake exports → S3 (Airflow)
 
 Total infrastructure cost: roughly $10/month - one always-on Fargate task, an S3 bucket, and one daily ECS export task, with enough capacity for our enterprise and effectively no cost to scale usage.
 
-The data choices were deliberate: small enough to fit in memory on a cheap VM, PII-clean, and well-described. But the real power doesn't come from the infrastructure. It comes from using the **stateful nature of MCP** to gate access to context, and to manage tokens and attention carefully.
+The data choices were deliberate: small enough to fit in memory on a cheap VM, PII-clean, and well-described. But the real power doesn't come from the infrastructure.
 
 ## The trick: about → describe_table → query
 
@@ -77,7 +77,7 @@ Usually the answer is no. Large prompts don't simply cost more - they dilute sig
 
 ### A short example: parent/child SKUs
 
-Beef Single Tin showed ~40k units in stock, but only a handul sold last quarter. Thus, it looked grossly overstocked. Cover calculation: 5,791 weeks 1000x fold where we should be.
+Beef Single Tin showed ~40k units in stock, but only a handful sold last quarter. Thus, it looked grossly overstocked. Cover calculation: 5,791 weeks - 1,000x where we should be.
 
 But the tin is a parent SKU. Real demand sits in the child 12-pack record. True cover: 3.7 weeks. The model would have confidently misdiagnosed inventory health based on entirely correct SQL. (A mistake, I did make in my first month at Jollyes!)
 
