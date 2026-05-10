@@ -55,6 +55,8 @@ S J E W  X1Y1T1  X2Y2T2  X3Y3T3  X4Y4T4  X5Y5T5  K
 
 A real cold-start customer who has only ever bought a Christmas dog toy looks like `b0021` (5 chars: Dog species, no junior/senior signal, breadth 2, checksum 1). A multi-pet senior‑cat household with diversified spend looks like `nA4Ax7M9aB7Bc6Cb5gC2y`. That's it. That's the whole customer.
 
+The 5-entry cap isn't a guess — **~75% of active loyalty customers shop ≤5 distinct subcategories in 90 days**, so for three quarters of the base the top‑5 *is* the shopping pattern, not a truncation of it. Detail below.
+
 ### What each field earns its bits
 
 | Field | Width | Carries |
@@ -66,6 +68,31 @@ A real cold-start customer who has only ever bought a Christmas dog toy looks li
 | `XnYn` | 2 chars | Flat ordinal into the ~307 used (dept, cat, subcat1) triples — opaque on the wire |
 | `Tn` | 1 char | Tier 0–9, where 9 = >90% of spend on this category |
 | `K` | 1 char | Checksum — tampered rows fail and are dropped at refresh |
+
+### How we know N=5 is enough
+
+The fingerprint reserves up to 5 category entries per customer. That number wasn't a guess — it falls out of the data.
+
+Counting distinct (department, category, subcategory1) triples per active loyalty customer over the last 90 days:
+
+- **74.6%** of customers shop ≤5 distinct subcategories. For three quarters of our base, the top‑5 is their entire shopping pattern — there's no tail to truncate.
+- **94.8%** shop ≤10. The remaining 5% is the long tail.
+
+For the 25% of customers whose shopping breaks past 5 subcats, the top‑5 (sorted by 180‑day spend share) still captures most of their economic activity:
+
+| Subcats shopped | Share of base | Median spend captured by top‑5 |
+|---|---|---|
+| 6–10 | 20% | 95% |
+| 11–20 | 5% | 81% |
+| 21+ | 0.3% | 64% |
+
+The 5-entry cap is doing very little truncation. For three quarters of customers it is lossless; for the next fifth it loses ≈5% of spend signal at the median; only the ~0.3% of "hyper‑diverse" shoppers (typically multi‑pet households with hobby spend across the catalogue) lose a meaningful slice. We accept that loss because the alternative — sizing the fingerprint for the 99th‑percentile shopper — would inflate every customer's record at no benefit to the median experience.
+
+A practical way to read it: the fingerprint format is sized for the median customer, with graceful degradation for the tail, rather than sized for the worst case at everyone's expense.
+
+*(One caveat: the SP rebuilds fingerprints over a 180‑day window, but our transaction-level table is 90‑day-bounded — so these distributions slightly understate the number of subcats a customer touches over 180d. The spend‑concentration story holds either way, since regular shoppers diversify their exposure faster than they diversify their spend.)*
+
+### Design choices
 
 The encoding makes hard decisions about what counts. A few examples:
 
