@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fingerprinting 600,000 customers in 20 characters each"
+title: "Fingerprinting hundreds of thousands of customers in 20 characters each"
 categories: [ai]
 tags: [recommendations, personalisation, snowflake, jollyes, retail]
 ---
@@ -9,7 +9,7 @@ tags: [recommendations, personalisation, snowflake, jollyes, retail]
 <div class="tldr" markdown="1">
 **TL;DR**
 
-- Every active Jollyes loyalty member is compressed into a ~20-character fingerprint that captures their pet's species, lifestage, and top‑5 spend categories. 600k members fit onto a single VM in memory.
+- Every active Jollyes loyalty member is compressed into a ~20-character fingerprint that captures their pet's species, lifestage, and top‑5 spend categories. Hundreds of thousands of members fit onto a single VM in memory.
 - We build one-to-one personalisation by mixing signals from the current product page, the basket, and the fingerprint - every customer sees a personalised set of recommendations at request time.
 - The same fingerprint repurposes cleanly: the marketing team reads it sideways to pick audiences like *"cat customers who buy food but not litter"* - five lines of code, zero new data pipelines.
 - Validation runs through Claude over our [MCP server](/stateful-retail-analyst-mcp/) - it samples real customers with real baskets, and understands in natural language whether the recommendations feel 'right'.
@@ -116,7 +116,7 @@ for (const [loyaltyNumber, mask] of speciesMaskMap) {
 }
 ```
 
-600k iterations of a few bitwise ops and a short loop over ≤5 fingerprint entries. Returns in <100ms.
+Hundreds of thousands of iterations, each a few bitwise ops and a short loop over ≤5 fingerprint entries. Returns in <100ms.
 
 The same fingerprint that says *"this customer's recommendations should lean cat-food‑heavy"* also says *"this customer is a cat-food shopper who has never bought cat litter"* - to a marketing system that has no idea what the recommendations service is.
 
