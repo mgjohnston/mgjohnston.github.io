@@ -12,6 +12,7 @@ tags: [recommendations, personalisation, snowflake, jollyes, retail]
 - Every active Jollyes loyalty member is compressed into a ~20-character fingerprint that captures their pet's species, lifestage, and top‑5 spend categories. 600k members fit into a single VM in memory.
 - We build one-to-one personalisation by mixing signals from the current SKU page, the basket, and the fingerprint — every customer sees a personalised set of recommendations at request time.
 - The same fingerprint repurposes cleanly: the marketing team reads it sideways to pick audiences like *"cat customers who buy food but not litter"* — five lines of code, zero new data pipelines.
+- Validation runs through Claude over our [MCP server](/stateful-retail-analyst-mcp/) — it samples real customers, real baskets, and real product pages, and reports in natural language whether the experience feels coherent. AI checking AI, with the customer's eyes.
 </div>
 
 ## The stack
@@ -53,7 +54,9 @@ A new cold-start customer who has only ever bought a Christmas dog toy looks lik
 
 Within this string we capture **>95% of spend for >90% of customers** — meaning that in 20 characters we keep every touchpoint tailored to a customer's pet and spend preferences.
 
-**Asymmetric trust between product and customer.** When we tag a *product* with a lifestage, we trust a stack of upstream signals — the catalogue tag, the category path, and a word‑boundary regex over the product description — and let the most restrictive win, so anything reading "junior" beats "adult". When we tag a *customer* with a lifestage, we deliberately throw the catalogue signal away and use only their transactions. A team labelling a generic adult treat as "Junior" is making a marketing perception call, and a marketing perception call shouldn't flip a real household's profile. The product side is conservative about going *out*; the customer side is conservative about going *in*. Same shape, deliberately asymmetric trust.
+**Asymmetric trust between product and customer.** When we tag a *product* with a lifestage, we trust a stack of upstream signals — the catalogue tag, the category path, and a word‑boundary regex over the product description — and let the most restrictive win, so anything reading "junior" beats "adult". When we tag a *customer* with a lifestage, we deliberately throw the catalogue signal away and use only their transactions. A team labelling a generic adult treat as "Junior" is making a marketing perception call, and a marketing perception call shouldn't flip a real household's profile.
+
+Both halves of the asymmetry point at the same outcome: **a non-puppy household should never see puppy recs**. We err inclusively on the product side (any "junior" signal wins, so nothing puppy-shaped slips out as a generic adult product) and strictly on the customer side (we only believe a household has a puppy when their *own* transactions say so). The two errors compose — puppy SKUs only ever reach customers we've actually confirmed are puppy owners. The asymmetry exists to protect the customer experience, not the model's tidy logic.
 
 ## Part 2 — Personalisation on the fly
 
@@ -72,6 +75,10 @@ For each candidate SKU in the anchor's pre-ranked list, the runtime sums three p
 Two properties fall out cleanly. The multiplier is *multiplicative* on purpose: a strong "Dog Adult Wet Food" fingerprint won't drag Cat Litter onto a Dog Food page, because the candidate has to be in the anchor's also‑bought list to start with — the fingerprint amplifies recall, it doesn't create it. And anonymous calls go through the same arithmetic: both extra terms are zero, the multiplier reduces to ×1, and the input order falls out unchanged. There is no "personalised" code path forking off — same function, different inputs.
 
 The whole personalisation pipeline is ~50 lines of TypeScript. No model inference, no embedding lookup, no remote call at request time. The expensive intelligence — the basket co‑occurrence matrix from >1M baskets, the CF aggregation, the fingerprint encoding — was paid for once, last Sunday, in Snowflake. The runtime just composes precomputed signals with arithmetic.
+
+### Dogfooding with Claude
+
+You can't unit-test *"does this feel personalised"*. So we validate by pointing Claude (via API) at our [stateful MCP server](/stateful-retail-analyst-mcp/) and letting it browse: pick a real loyalty number, pick a real basket, walk through what that customer would see on a handful of product pages, and judge in plain English whether the recommendations feel coherent. It surfaces things a deterministic test never would — a senior‑cat household whose second rec is a puppy chew, a basket where the co-occurrence pass tilts the page in a direction that reads wrong to a human. AI checking AI, on real customers, with the customer's eyes.
 
 ## Part 3 — Same fingerprints, sideways: voucher targeting
 
