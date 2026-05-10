@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building a Stateful Retail Analyst with Claude and MCP"
+title: "A stateful MCP analyst: enforced agent curriculum and attention management"
 categories: [ai]
 tags: [claude, mcp, llm, bi, jollyes]
 ---
