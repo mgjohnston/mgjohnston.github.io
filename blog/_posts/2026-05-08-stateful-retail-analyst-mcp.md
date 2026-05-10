@@ -16,7 +16,7 @@ tags: [claude, mcp, llm, bi, jollyes]
 
 > "Is Uber performing well?"
 
-That's the kind of question Jollyes managers now drop into Claude.ai and get a nuanced report back in under a minute - without an analyst, nor a dashboard, yet with real data framed within the real business context.
+That's the kind of question Jollyes managers now drop into Claude.ai and get a nuanced report back - without an analyst, nor a dashboard, yet with real data framed within the real business context.
 
 Our Claude.ai tenant can SSO into a read-only MCP server I deployed alongside a daily Snowflake export. It has been remarkably effective at drawing together disparate data sources into coherent analyses across our retail domain, and has let colleagues at every level interact with our data in real time without waiting for BI or analyst capacity.
 
@@ -77,7 +77,7 @@ Consequently, the gated commands introduce context on-demand and on the topics w
 | `describe_table(X)` | One table's schema, examples, warnings, patterns | ~1–2k tokens | Only when that table is needed |
 
 
-**This matters for more than token cost, but attention**. The scarce resource isn't tokens or context (any more!) - though sensible management is prudent to maximise ROI. Every irrelevant warning loaded into context is a distractor competing for model reasoning capacity:
+**This matters for more than tokens and context, but attention**. Every irrelevant warning loaded into context is a distractor competing for model reasoning capacity:
 
 - does parent/child SKU deduplication matter for voucher analysis?
 - does the EDLP pricing transition affect today's stock query?
@@ -96,7 +96,7 @@ Anthropic's Skills feature is the obvious alternative for some of this. We didn'
 
 - **Skills are user-side; MCP is server-side.** Anyone who connects gets the right context, regardless of whether they've enabled a skill. Not all our MCP users are coming from Claude.ai.
 - **Updates are centralised.** When EDLP context changes or a new structural break happens, I update the MCP server once and not need to distribute a new skill file.
-- **`describe_table` doesn't fit in a Skill anyway.** A large skill would equally dilute attention just as a large connector body would.
+- **`describe_table` doesn't fit in a Skill anyway.** A large skill would dilute attention just as a large connector body would.
 
 ## Closing
 
