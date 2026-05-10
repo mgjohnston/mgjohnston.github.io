@@ -4,11 +4,11 @@ title: Cambridge Half Marathon for Cambridgeshire Community Foundation
 categories: [running, charity]
 tags: [half marathon, cambridge, fundraising]
 ---
-Ran the [TTP Cambridge Half Marathon](https://www.cambscf.org.uk/campaign/cambridgehalf2026/fundraiser/128/) today in support of the **Cambridgeshire Community Foundation**, which raises funds and awards grants to local charities tackling inequality and disadvantage across the county.
+Ran the [TTP Cambridge Half Marathon](https://cambridgehalfmarathon.com/) today in support of the **[Cambridgeshire Community Foundation](https://www.cambscf.org.uk/campaign/cambridgehalf2026/fundraiser/128/)**, which raises funds and awards grants to local charities tackling inequality and disadvantage across the county.
 
 ![Matthew at the Cambridge Half Marathon start area]({{ site.baseurl }}/images/CambHalf26-me.jpg)
 
-**Time: 1:55:32** (sub-2 hour) - 21.45 km, averaging just under 5:30/km, with a 26:23 first 5k.
+**[Chip time: 1:55:32](https://cambridgehalf.resultsbase.net/myresults.aspx?CId=8&RId=21012&EId=1&AId=65415)** (sub-2 hour) - 21.45 km, averaging just under 5:30/km, with a 26:23 first 5k.
 
 ![Cambridge Half Marathon route]({{ site.baseurl }}/images/CambHalf26-map.png)
 
