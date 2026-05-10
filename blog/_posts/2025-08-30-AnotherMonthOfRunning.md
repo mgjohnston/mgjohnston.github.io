@@ -8,6 +8,15 @@ Five and a half years after the [first month of 5k a day](/OneMonthOfRunning/), 
 
 The big difference between 2020-me and 2025-me: pace. Day 1 in 2020 was a 35-minute 5k. This time, on my 25th parkrun in early August, I posted **my first sub-25-minute 5k**. Across the streak, the daily 5k splits sat mostly between 25 and 30 minutes, even on the back-to-back days.
 
+| Month | 5k+ runs | Total km | Best 5k |
+|---|---|---|---|
+| Jun (from 18th) | 6 | 33 | 27:22 |
+| Jul | 27 | 152 | 25:37 |
+| Aug | 25 | 138 | 22:56 |
+| **Total** | **58** | **~323** | **22:56** |
+
+The 24:05 parkrun PB on 9 Aug was the headline, but two weeks later I quietly went sub-23 on a regular morning loop on 23 Aug.
+
 The pattern that worked, again:
 
 - Run every day, no debate, even if it's a slow shuffle
