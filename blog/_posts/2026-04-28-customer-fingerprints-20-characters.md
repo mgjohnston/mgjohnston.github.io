@@ -33,7 +33,7 @@ In‑memory Maps  (recsByAnchor, loyaltyTopN, fingerprintByCustomer, …)
 Public recs API   +   Private segments API
 ```
 
-One always‑on container, two CSVs, one heartbeat. The infrastructure cost is roughly the same as the [MCP server](/stateful-retail-analyst-mcp/): ~$10/month. There is no database in the request path.
+One always‑on container, two CSVs, one heartbeat. The infrastructure cost is roughly the same as my [stateful MCP server for retail analytics](/stateful-retail-analyst-mcp/): ~$10/month. There is no database in the request path.
 
 ## Part 1 - A customer in 20 characters
 
@@ -91,7 +91,7 @@ You can't unit-test *"does this feel personalised"*. So we validate by using Cla
 
 This is where the encoding pays back a second time.
 
-The marketing team wants to send a voucher to *cat customers who buy food but not litter*. That's a real campaign: customers using us as a top-up for food but going to the supermarket for litter. The hypothesis is that a litter voucher converts them into a full-basket cat customer. Currently, we have to spend analyst time on Snowflake queries to build an audience. 
+The marketing team wants to send a voucher to *cat customers who buy food but not litter*. That's a real campaign: customers using us as a top-up for food but going to the supermarket for litter. The hypothesis is that a litter voucher converts them into a full-basket cat customer. Previously, we'd have spent analyst time on Snowflake queries to build the audience.
 
 Instead, the segments API just queries the in‑memory fingerprints sideways:
 
