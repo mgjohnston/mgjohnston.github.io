@@ -41,13 +41,12 @@ A customer fingerprint is a variable-length string of base62 characters, 5 + 3·
 
 ```
 S J E W  X1Y1T1  X2Y2T2  X3Y3T3  X4Y4T4  X5Y5T5  K
-└┬┘ │ │  └──┬─┘                                  │
- │  │ │     │                                    └─ checksum
- │  │ │     └─ "I spend tier T on category XY"  (×5)
- │  │ └─ breadth: distinct (dept, cat) over 180d
- │  └─ senior species mask (Senior/Mature spend last few months)
- │  junior species mask  (Puppy/Kitten/Junior spend last few months)
- species mask  (any spend over 180d, by species)
+│ └┬┘ │  └──┬─┘                                  │
+│  │  │     │                                    └─ checksum
+│  │  │     └─ "I spend tier T on (dept, cat, subcat1) XY"  (×5)
+│  │  └─ breadth: distinct (dept, cat) over 180d
+│  └─ lifestage mask: junior (J) / senior (E) spend last few months
+└─ species mask  (any spend over 180d, by species)
 ```
 
 A new cold-start customer who has only ever bought a Christmas dog toy looks like `b0021` (5 chars: Dog species, no junior/senior signal, breadth 2, checksum 1). A multi-pet senior‑cat household with diversified spend looks like `nA4Ax7M9aB7Bc6Cb5gC2y`. That's it. That's a whole customer.
