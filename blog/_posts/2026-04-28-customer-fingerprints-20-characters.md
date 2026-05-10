@@ -12,7 +12,7 @@ tags: [recommendations, personalisation, snowflake, jollyes, retail]
 - Every active Jollyes loyalty member is compressed into a ~20-character fingerprint that captures their pet's species, lifestage, and top‑5 spend categories. 600k members fit onto a single VM in memory.
 - We build one-to-one personalisation by mixing signals from the current product page, the basket, and the fingerprint - every customer sees a personalised set of recommendations at request time.
 - The same fingerprint repurposes cleanly: the marketing team reads it sideways to pick audiences like *"cat customers who buy food but not litter"* - five lines of code, zero new data pipelines.
-- Validation runs through Claude over our [MCP server](/stateful-retail-analyst-mcp/) - it samples real customers with real baskets, and understands in natural language whether the recommendations feels 'right'.
+- Validation runs through Claude over our [MCP server](/stateful-retail-analyst-mcp/) - it samples real customers with real baskets, and understands in natural language whether the recommendations feel 'right'.
 </div>
 
 ## The stack
@@ -85,7 +85,7 @@ Second, anonymous traffic runs through the exact same arithmetic. With no basket
 
 ### Dogfooding with Claude
 
-You can't unit-test *"does this feel personalised"*. So we validate by using Claude Cide with our [stateful MCP server](/stateful-retail-analyst-mcp/) and letting it browse: pick a real loyalty number, pick a real basket, walk through what that customer would see on a handful of product pages, and judge whether the recommendations feel coherent. It surfaces things a deterministic test never would - a senior‑cat household whose second rec is a puppy chew, a basket where the co-occurrence pass tilts the page in a direction that feels wrong with the context of the customer's prior transactions.
+You can't unit-test *"does this feel personalised"*. So we validate by using Claude Code with our [stateful MCP server](/stateful-retail-analyst-mcp/) and letting it browse: pick a real loyalty number, pick a real basket, walk through what that customer would see on a handful of product pages, and judge whether the recommendations feel coherent. It surfaces things a deterministic test never would - a senior‑cat household whose second rec is a puppy chew, a basket where the co-occurrence pass tilts the page in a direction that feels wrong with the context of the customer's prior transactions.
 
 ## Part 3 - Same fingerprints, sideways: voucher targeting
 

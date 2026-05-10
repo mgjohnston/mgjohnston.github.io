@@ -4,7 +4,7 @@ title: Another stretch of 5k a day
 categories: [running]
 tags: [5k]
 ---
-Five and a half years after the [first month of 5k a day](/OneMonthOfRunning/), I went again - this time from mid-June through to the end of August. Two and a half months of (nearly) daily 5k+, with the at least a monthly 10k thrown in too. 
+Five and a half years after the [first month of 5k a day](/OneMonthOfRunning/), I went again - this time from mid-June through to the end of August. Two and a half months of (nearly) daily 5k+, with at least a monthly 10k thrown in too.
 
 The big difference between 2020-me and 2025-me was starting Parkrun again in May 2024. This meant Day 1 in 2025 was accidental and a ~30 min trot, whereas Day 1 in 2020 was a very tough 35-minute 5k. The streak threw up two parkrun PBs:
 
