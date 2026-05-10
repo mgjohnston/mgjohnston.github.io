@@ -4,19 +4,19 @@ title: "Embeddings: LLM's best kept secret?"
 categories: [ai]
 tags: [embeddings, llm, retail, jollyes]
 ---
-*Three retail problems solved with embeddings - total spend ~£30, total time an afternoon.*
+*Two retail problems solved with embeddings - total spend under £30, total time an afternoon.*
 
 <div class="tldr" markdown="1">
 **TL;DR**
 
 - Embeddings are the cheap power tool of applied AI - underrated next to the GPT / Claude headline acts. 30,000 baskets vector-embedded for five pence in five minutes.
-- We used them at Jollyes for three things in three weeks: labelling 30k baskets by motivation, tracking what those motivations turn into a year later, and replacing a human surveyor for new-store footfall scoring.
-- The recipe each time: get an LLM to produce high-quality labels on a small sample, embed the full population cheaply, then let classical ML map between them.
+- Two Jollyes use cases: classifying baskets into human-readable shopping *modes* (the kind classical PCA can't surface), and replacing a human surveyor for new-store footfall scoring from a postcode alone.
+- The recipe each time: get an LLM to produce expensive labels on a small sample, embed the full population cheaply, then let classical ML map between them. Embed once, query many.
 </div>
 
 A lot of the AI conversation lands on the headline model - what GPT-5 / Claude / etc can or can't do. Embeddings get less airtime, but they are the workhorse that quietly does a lot of the work in production. They're cheap, they compose well with the classical ML toolbox of the last decade, and they unlock problems that used to need a human in the loop.
 
-Three places we put them to work at Jollyes recently.
+Two places we put them to work at Jollyes recently.
 
 ## Part 1 - Why do people shop?
 
@@ -49,38 +49,23 @@ The trick is steps 4–6: we pay the LLM for high-quality labels on a small samp
 
 **Net result: 30k baskets labelled with a meaningful shopping-reason taxonomy, end to end, for ~£25.55.** A labelling agency wouldn't even quote you for that.
 
-## Part 2 - What do people do next?
+### Meaning, not just dimensionality
 
-Once every basket has a reason-for-visit, the much more interesting question is whether the *first* basket predicts what happens over the next year.
+Here's the part that matters more than the price tag.
 
-Tracking 20,000 customers across 240,000 baskets in their first 365 days:
+We could have come at this classically - run PCA on the basket vectors, find clusters, write up the principal components. We did. The first principal component fell out as *animal type* (dog / cat / small animal); the second as *food / non-food*. Both are already in the basket header. PCA recovered the column names and called it insight.
 
-| Reason for first visit | Sub-reason | Share of first baskets | Mean first-basket value | Stickiness (returned within 90d) | LTV (first 365d) |
-|---|---|---|---|---|---|
-| Food | Everyday food | 26% | £23 | 58% | £151 |
-| Food | Frozen raw food | 5% | £24 | **67%** | **£235** |
-| Non-food | Toys | 7% | £23 | **45%** | £106 |
-| Non-food | Treats and chews | 27% | £22 | 55% | £138 |
+The embedding-and-label route produces something different in kind. The labels it surfaces are shopping *modes* a human would actually recognise:
 
-Two stories jump out. **First-basket value is roughly the same across reasons** (£22–£24) - the till receipt does not tell you who is about to be a great customer. But **stickiness and LTV diverge sharply**. A customer whose first visit is frozen raw food returns within 90 days 67% of the time and is worth £235 in their first year. A customer whose first visit is toys returns 45% of the time and is worth £106. Same basket size at the till, ~2.2× difference in first-year value.
+- *"weekly main shop with a chew thrown in"*
+- *"pure treat run"*
+- *"medical shop with an apology treat to make it up to the pet"*
 
-The cohort dynamics get more interesting when you compare *first visit* against *all subsequent visits*:
+These aren't orthogonal axes - they're stories about what the basket was *for*. A merchandiser can act on them. A category manager can plan a promotion against them. A marketing team can write a voucher around them. PCA1 = "dog" is just a tautology of how the basket was filled out.
 
-| Reason for visit | First visit share | Future visits share | Enrichment |
-|---|---|---|---|
-| FOOD / EVERYDAY_FOOD | 26% | 35% | 0.73× |
-| NEW PET / PET_SETUP_ESSENTIALS | 3% | 1% | 5.54× |
-| NEW PET / PUPPY_OR_KITTEN_FOOD | 3% | 1% | 1.88× |
-| NON-FOOD / ACCESSORIES_AND_KIT | 11% | 5% | 2.12× |
-| SERVICE / VET_CARE | 4% | 0% | 8.76× |
+The wider point: classical decomposition finds the geometry of the data; an LLM finds the *meaning* humans put into it. Embeddings are how you bridge the two.
 
-Read the **Enrichment** column as "how over-represented this reason is in *first* visits versus *all* visits". The big enrichments name what brings people through the door for the first time but stops appearing afterwards: new-pet kit (5.54×), vet care (8.76×), accessories (2.12×). The under-1 enrichment on Everyday Food (0.73×) tells you the opposite - it's under-represented in first visits, over-represented in repeat ones.
-
-> Customers come for their new pets, accessories, and vets. They stay for the food.
-
-That's a one-line strategy statement derived from an embedding-powered labelling job that cost less than a takeaway.
-
-## Part 3 - Take the human out of the loop
+## Part 2 - Take the human out of the loop
 
 Our new-store revenue model leans on a footfall score for the proposed retail park - a subjective 1–10 number, currently produced by our property surveyor walking the location and grading it. SHAP on the revenue model shows footfall features are the top two predictors by a clear margin.
 
@@ -110,11 +95,21 @@ The result: a reasonable correlation between the model's prediction and the huma
 
 This isn't a victory over the surveyor - it's a chance to scale them. They now spend time on borderline sites and on auditing the model's outliers, instead of on every postcode in the country. The bottleneck became a sampling target.
 
+### Your top dimensions are not the embedding's top dimensions
+
+A subtlety worth flagging.
+
+Embedding dimensions come pre-ordered by the model that produced them, roughly by how much semantic information they carry across the corpus the model was trained on. The intuition most people start with is that the early dimensions are the most useful.
+
+For *the embedding model*, they are. For *your task*, they often aren't. The top SHAP features on our footfall task are `embedding_160`, `_472`, `_329` - not `embedding_0`, `_1`, `_2`. If we re-use the same population embedding on a different downstream feature - dwell time, basket size, demographic profile of the catchment - a different `embedding_XXX` short-list bubbles up each time.
+
+The implication: an embedding is a compressed snapshot of *meaning in general*; any given task is a specific cross-section through it. One embedding pass gives you many feature spaces. **Embed once, query many.**
+
 ## The pattern
 
-Three different problems. The same shape each time:
+Two different problems. The same shape each time:
 
-1. **Get an LLM to produce small-sample, expensive-but-high-quality outputs** (free-text reasons, closed-taxonomy labels, expert-tone surveys).
+1. **Get an LLM to produce small-sample, expensive-but-high-quality outputs** (closed-taxonomy labels, expert-tone surveys).
 2. **Embed the full population cheaply** - five pence for 30,000 records.
 3. **Use the small-sample outputs as labels, the embeddings as features, and a classical model as the glue.**
 
