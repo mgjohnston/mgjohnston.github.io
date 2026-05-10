@@ -8,7 +8,7 @@ Ran the [TTP Cambridge Half Marathon](https://cambridgehalfmarathon.com/) today 
 
 ![Matthew at the Cambridge Half Marathon start area]({{ site.baseurl }}/images/CambHalf26-me.jpg)
 
-Just back from a week of ski touring in Val Thorens with UCPA - legs absolutely knackered from a week of skinning uphill - but delighted to have ducked under the 2-hour goal.
+Just back from a week of ski touring in Val Thorens with UCPA - legs knackered from a week of skinning uphill - but delighted to have made the 2-hour goal in my first half.
 
 **[Chip time: 1:55:32](https://cambridgehalf.resultsbase.net/myresults.aspx?CId=8&RId=21012&EId=1&AId=65415)** - 21.45 km, averaging just under 5:30/km, with a 26:23 first 5k.
 
