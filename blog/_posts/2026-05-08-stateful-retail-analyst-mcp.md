@@ -6,6 +6,14 @@ tags: [claude, mcp, llm, bi, jollyes]
 ---
 *How we are changing BI at Jollyes Pets on a $10/month VM*
 
+<div class="tldr" markdown="1">
+**TL;DR**
+
+- Jollyes managers ask natural-language retail questions in Claude.ai and get grounded answers in under a minute, generated from business-aware SQL over real company data.
+- The server is **stateful**: it enforces a curriculum (`about` → `describe_table` → `query`) so the model can't query a table it hasn't been briefed on, and self-corrects when it tries.
+- That gating doubles as **context management**: only relevant schema, joins, and business caveats load on demand, preserving attention and keeping the connector lightweight enough to stay always-on.
+</div>
+
 > "Is Uber performing well?"
 
 That's the kind of question Jollyes managers now drop into Claude.ai and get a nuanced report back in under a minute - without an analyst, nor a dashboard, yet with real data framed within the real business context.
