@@ -49,7 +49,7 @@ S J E W  X1Y1T1  X2Y2T2  X3Y3T3  X4Y4T4  X5Y5T5  K
 └─ species mask  (any spend over 180d, by species)
 ```
 
-A new cold-start customer who has only ever bought a Christmas dog toy looks like `b0021` (5 chars: Dog species, no junior/senior signal, breadth 2, checksum 1). A multi-pet senior‑cat household with diversified spend looks like `nA4Ax7M9aB7Bc6Cb5gC2y`. That's it. That's a whole customer.
+A new cold-start customer who has only ever bought a Christmas dog toy looks like `b0021` (5 chars: Dog species, no junior/senior signal, breadth 2, checksum 1). A multi-pet senior‑cat household with diversified spend looks like `nA4Ax7M9aB7Bc6Cb5gC2y`. That's a whole customer.
 
 Within this string we capture **>95% of spend for >90% of customers** - meaning that in 20 characters we keep every touchpoint tailored to a customer's pet and spend preferences.
 
