@@ -1,0 +1,17 @@
+---
+layout: post
+title: Cambridge Half Marathon for Cambridgeshire Community Foundation
+categories: [running, charity]
+tags: [half marathon, cambridge, fundraising]
+---
+Ran the [TTP Cambridge Half Marathon](https://cambridgehalfmarathon.com/) today in support of the **[Cambridgeshire Community Foundation](https://www.cambscf.org.uk/campaign/cambridgehalf2026/fundraiser/128/)**, which raises funds and awards grants to local charities tackling inequality and disadvantage across the county.
+
+![Matthew at the Cambridge Half Marathon start area]({{ site.baseurl }}/images/CambHalf26-me.jpg)
+
+Just back from a week of ski touring in Val Thorens with UCPA - legs knackered from a week of skinning uphill - but delighted to have made the 2-hour goal in my first half.
+
+**[Chip time: 1:55:32](https://cambridgehalf.resultsbase.net/myresults.aspx?CId=8&RId=21012&EId=1&AId=65415)** - 21.45 km, averaging just under 5:30/km, with a 26:23 first 5k.
+
+![Cambridge Half Marathon route]({{ site.baseurl }}/images/CambHalf26-map.png)
+
+If you'd like to support the Foundation's work, the fundraising page is still open: <https://www.cambscf.org.uk/campaign/cambridgehalf2026/fundraiser/128/>
