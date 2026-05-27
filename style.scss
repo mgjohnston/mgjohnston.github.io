@@ -335,10 +335,12 @@ nav {
   }
 
   // Footnotes (kramdown generates these from [^name] references)
-  sup[role="doc-noteref"] {
-    line-height: 0;
+  sup {
+    position: relative;
+    top: -0.5em;
     font-size: 0.75em;
-    vertical-align: super;
+    line-height: 0;
+    vertical-align: baseline;
 
     a {
       text-decoration: none;
