@@ -11,8 +11,8 @@ tags: [embeddings, llm, retail, jollyes]
 
 - Embeddings are a cheap power tool of LLMs - underrated next to the GPT / Claude GenAI headlines.
 - You can integrate an LLM into your XGBoost workflow: get an LLM to produce expensive labels on a small sample, embed the full population cheaply and quickly, then let classical ML map between them.
-- The most important embeddings to the model are seldom the most important vectors for your use case.
-- You can reuse the embeddings across different use cases, picking out different vectors which are important to you.
+- The most important embeddings to the model are seldom the most important dimensions for your use case.
+- You can reuse the embeddings across different use cases, picking out different dimensions which are important to you.
 </div>
 
 Most AI conversations are around the headline models - GPT-5 / Claude - in generative use cases. Embeddings get almost no look in, but they are at the heart of the maths which drive LLMs. Most LLM providers provide incredibly cheap and fast embedding endpoints. I will show here, with two examples, how you can use embeddings with the classical ML toolbox, and unlock problems that used to need a human in the loop or lengthy research.
