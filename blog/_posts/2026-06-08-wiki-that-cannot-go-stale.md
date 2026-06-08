@@ -30,7 +30,7 @@ scope to git-tracked files  ──►  digesters (.dtsx, DAGs)
         │
         ▼
 ONE summarise pass ──► facts JSON + human view + machine view
-        │  (model chosen by config: OpenAI · Azure · Anthropic · Bedrock)
+        │  (model chosen by config: OpenAI · Anthropic · Bedrock)
         ▼
 backend REST /api/private/*  ──►  Postgres (one row per repo)
         ▲
@@ -59,7 +59,7 @@ The result reads like a concise "source → transform → destination" pipeline 
 
 I find it an interesting principle to think over: use cheap, fast and deterministic parsing to decide exactly what information reaches the model. The expensive LLM step receives only a clean, safe, information-dense representation.
 
-In many ways, you can extend the entire wiki to the same principles: the repos are being parsed into information-dense, machine-accessible representations of the code base for rapid and cheap(er) parsing of the code bases in downstream systems.
+In many ways, you can extend the entire wiki to the same principles: the repos are being parsed into information-dense, machine-accessible representations of the code base for rapid, cheaper consumption by downstream systems.
 
 ## An example: stock, end to end
 
@@ -77,4 +77,4 @@ The 'win' isn't that an agent can write your documentation. It's that the docume
 
 The stock example is where the system stops being just documentation and starts becoming operational infrastructure. That level of analysis is only possible because the estate has already been indexed, digested, and made searchable. The MCP compresses hundreds of pages of organisational knowledge (derived from millions of lines of code) into a form that an agent can navigate in seconds, while the facts blobs allow it to piece together the exact endpoints and inter-system dependencies in a structured way.
 
-The wiki and MCP serve complementary roles. The wiki keeps the documentation accurate and discoverable; the MCP turns that knowledge into a machine-accessible interface. Together they allow agents to self-serve information at low cost and high-speed to complete tasks more efficiently and accurately.
+The wiki and MCP serve complementary roles. The wiki keeps the documentation accurate and discoverable; the MCP turns that knowledge into a machine-accessible interface. Together they allow agents to self-serve information at low cost and high speed to complete tasks more efficiently and accurately.
