@@ -69,7 +69,7 @@ A much harder question is one that spans the whole estate, and here the wiki MCP
 
 Claude Code first searched across the wiki via the MCP for 'stock', 'parent' and 'child' and found the relevant repos. From here, the agent fanned out roughly 30 sub-agents across 17 repos, to first build the flow, and then adversarially verify each part of the final claim. The whole review cost a couple of million tokens, cheap because it ran small models over repos and only opened and read the key files with bigger models, and we managed to dig out a complex multi-system, multi-repo flow within 15 minutes.
 
-(What's more, the entire finding was then verified using the [SQL MCP](/stateful-retail-analyst-mcp/) against our allocation and stock data, and double-checked against live point-of-sale (POS) APIs with a temporary token.)
+(What's more, the entire finding was then verified using the [SQL MCP](/stateful-retail-analyst-mcp/) against our allocation and stock data, and double-checked against live point-of-sale (POS) APIs with a temporary token. Finally, the whole write-up was emailed to me from within claude@jollyes.com using a new `draft_email` → `send_email` tool chain in the SQL MCP!)
 
 ## Closing
 
