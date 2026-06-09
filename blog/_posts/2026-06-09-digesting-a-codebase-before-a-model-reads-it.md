@@ -49,7 +49,7 @@ For example, SSIS (.dtsx) packages are often huge XML documents (a single MAIN.d
 - Data-flow components in execution order
 - SQL executed by each step
 
-The result reads like a concise "source → transform → destination" pipeline rather than hundreds of kilobytes of XML markup. Interestingly, despite the model being able to read the entire file into context easily, and the transformation being a simple deterministic script — the outcome of runs with a digested file is significantly better. It seems to structure the data better than the XML in a semantic way which works for getting the key logic flows: highlighting what's most important for the documentation to the model.
+The result reads like a concise "source → transform → destination" pipeline rather than hundreds of kilobytes of XML markup. Interestingly, despite the model being able to read the entire file into context easily, and the transformation being a simple deterministic script - the outcome of runs with a digested file is significantly better. It seems to structure the data better than the XML in a semantic way which works for getting the key logic flows: highlighting what's most important for the documentation to the model.
 
 I find it an interesting principle to think over: use cheap, fast and deterministic parsing to decide exactly what information reaches the model, and in what shape. The expensive LLM step only receives a clean, safe, structured, information-dense representation.
 
