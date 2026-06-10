@@ -77,4 +77,4 @@ The 'win' isn't that an agent can write your documentation. It's that the docume
 
 The stock example is where the system stops being documentation and starts becoming operational infrastructure. That level of analysis is only possible because the estate has already been indexed, digested, and made searchable - we compress hundreds of pages of organisational knowledge, derived from millions of lines of code, into a form an agent can navigate in seconds.
 
-The principle is the same at all scales: spend cheap, deterministic effort deciding what reaches the model, and in which format, then the expensive model will do better work. Digest the file for the agent to digest the estate for the agents that follow.
+The principle is the same at all scales: spend cheap, deterministic effort deciding what reaches the model, and in which format, then the expensive model will do better work. Digest the file for the agent; digest the estate for the agents that follow.
