@@ -10,7 +10,7 @@ tags: [mcp, authentication, oauth, claude, jollyes, kaggle]
 **TL;DR**
 
 - Claude.ai connectors take only a URL - no auth-header field, and no way to *start* OAuth themselves - so Kaggle's MCP 403'd me.
-- At Jollyes we authenticate Claude.ai three ways: server-driven OAuth 2.0 (the main one), no auth (when we're happy to share), or a hash in the URL.
+- At Jollyes we authenticate Claude.ai three ways: OAuth 2.0 over SSO (the main one), no auth (when we're happy to share), or a hash in the URL.
 - Knowing who is calling allows more than security. It unlocks my favourite MCP trick: **dynamic tool registration** - a different set of tools, and personalised tool descriptions, per user.
 </div>
 
