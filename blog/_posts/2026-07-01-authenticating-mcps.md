@@ -19,7 +19,7 @@ I've subscribed to Kaggle's emails for over ten years and never once entered a c
 
 Naturally, the first job - after being amazed I'd bagged the `biologist` username years ago - was downloading the competition data. I was very excited to see Kaggle ships an [MCP](https://www.kaggle.com/docs/mcp).
 
-![The Kaggle MCP tools listed in Claude.ai]({{ site.baseurl }}/images/kaggle-mcp-20260701.png)
+![Kaggle's competition data page, offering the remote MCP server as a download option]({{ site.baseurl }}/images/kaggle-mcp-20260701.png)
 
 Installing the MCP into Claude.ai - which nicely syncs connectors and auth across the web app, my phone, and Claude Code - was plain sailing. Until I asked, *"download the competition data"*: **403, no access**. Every non-OAuth endpoint worked; every authenticated one didn't.
 
