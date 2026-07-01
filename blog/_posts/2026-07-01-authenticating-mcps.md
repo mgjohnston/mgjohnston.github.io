@@ -9,7 +9,7 @@ tags: [mcp, authentication, oauth, claude, jollyes, kaggle]
 <div class="tldr" markdown="1">
 **TL;DR**
 
-- Claude.ai connectors take only a URL, so they can't complete an OAuth handshake.
+- Claude.ai connectors take only a URL - no auth-header field, and no way to *start* OAuth themselves - so Kaggle's MCP 403'd me.
 - At Jollyes we authenticate Claude.ai three ways: server-driven OAuth 2.0 (the main one), no auth (when we're happy to share), or a hash in the URL.
 - Knowing who is calling allows more than security. It unlocks my favourite MCP trick: **dynamic tool registration** - a different set of tools, and personalised tool descriptions, per user.
 </div>
@@ -58,7 +58,7 @@ Now, this is really a Claude.ai limitation, not a Kaggle one. But Claude.ai is w
 
 ## 1. The main one - OAuth 2.0
 
-This runs exactly opposite to the example above. I just said Claude.ai can't use OAuth - but really it can't do *client-driven* OAuth, where the client goes and discovers how to authorise itself (which is what Kaggle expects). It works well with *server-driven* discovery, where your MCP advertises the `/.well-known/` OAuth endpoints[^wellknown]. So, you set up the connection with a Client ID and Secret (which, wisely, Kaggle don't hand out) and build that auto-discovery and OAuth machinery on your MCP.
+This runs exactly opposite to the example above. Claude.ai *can* do OAuth - it just won't kick the flow off itself the way Kaggle expects (a command, or calling an `authorize` tool). Instead it responds to a challenge: your MCP returns a `401` pointing at its `/.well-known/` metadata[^wellknown], and Claude discovers the rest. If your identity provider supports Dynamic Client Registration, that's all it takes - paste the URL and go. We use Entra, whose dynamic registration is locked down, so we pre-register the app and hand Claude a Client ID and Secret (which, wisely, Kaggle don't hand out). Either way, the auto-discovery and OAuth machinery lives on your MCP.
 
 This works fantastically well for [Jollyes](/stateful-retail-analyst-mcp/). We already SSO into Claude.ai through Entra, so the natural flow is to use that same SSO to reach the MCP. The huge benefit, beyond security, is that we can see exactly who is using the MCP and for what.
 
