@@ -14,9 +14,9 @@ tags: [mcp, authentication, oauth, claude, jollyes, kaggle]
 - Knowing who is calling allows more than security. It unlocks my favourite MCP trick: **dynamic tool registration** - a different set of tools, and personalised tool descriptions, per user.
 </div>
 
-I've subscribed to Kaggle's emails for over ten years and only entered a competition once. Yesterday one caught my eye - [cell tracking during development](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/leaderboard) - because it's closely aligned to a postdoc friend's work. She's spent the last several years counting and measuring plant cells in [MorphoGraphX](https://www.mpipz.mpg.de/MorphoGraphX), and in the last month has made huge strides building custom viewers and human-in-the-loop tools with Claude Code (more on that idea in another post soon). I thought I'd try the same approach in this Kaggle competition.
+I've subscribed to Kaggle's emails for over ten years and only entered a competition once. Yesterday, one caught my eye - [cell tracking during development](https://www.kaggle.com/competitions/biohub-cell-tracking-during-development/) - because it's closely aligned to a postdoc friend's work. She's spent the last several years counting and measuring plant cells in [MorphoGraphX](https://www.mpipz.mpg.de/MorphoGraphX), and in the last month has made huge strides building custom viewers and human-in-the-loop tools with Claude Code (more on that idea in another post soon). I thought I'd try the same approach in this Kaggle competition.
 
-Naturally, the first job - after being amazed I'd bagged the `biologist` username years ago - was downloading the competition data. I was very excited to see Kaggle ships an MCP.
+Naturally, the first job - after being amazed I'd bagged the `biologist` username years ago - was downloading the competition data. I was very excited to see Kaggle ships an MCP to allow agents to do this for me.
 
 ![Kaggle's competition data page, offering the remote MCP server as a download option]({{ site.baseurl }}/images/kaggle-mcp-20260701.png)
 
@@ -103,5 +103,9 @@ The Kaggle MCP might already be set up correctly (I never got it working…), bu
 
 To everyone else writing their own MCP, play with the dynamic nature of tool registrations and let me know of some more neat tricks.
 
-[^wellknown]: Are they well known? Hacker News had two good threads on it recently: [mnot.net/blog/2026/well_known_uris](https://mnot.net/blog/2026/well_known_uris) and [the HN discussion](https://news.ycombinator.com/item?id=48595980).
-[^webcc]: Confusingly distinct from CLI Claude Code, and definitely not desktop Claude.
+To Anthropic, may you allow MCP setup on Claude.ai with custom headers?
+
+I should start work on an entry now!
+
+[^wellknown]: Are they well known? Hacker News had two good threads on it recently. One pointed to this blog: [mnot.net/blog/2026/well_known_uris](https://mnot.net/blog/2026/well_known_uris) and a separate discussion [here](https://news.ycombinator.com/item?id=48595980).
+[^webcc]: Confusingly distinct from CLI Claude Code.
