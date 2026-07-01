@@ -59,7 +59,7 @@ Now, this is really a Claude.ai limitation, not a Kaggle one. But Claude.ai is e
 
 ## 1. The main one - OAuth 2.0
 
-This runs exactly opposite to Kaggle. I just said Claude.ai can't OAuth - but it can, *if the server does the work*. You set up the connection with a Client ID and Secret (which, wisely, Kaggle don't hand out) and build the auto-discovery and OAuth machinery on your MCP.
+This runs exactly opposite to Kaggle. I just said Claude.ai can't OAuth - but really it can't do *client-driven* OAuth, where the client goes and discovers how to authorise itself (which is what Kaggle expects). It's perfectly happy with *server-driven* discovery, where your MCP advertises the OAuth endpoints and Claude.ai only has to follow. So you set up the connection with a Client ID and Secret (which, wisely, Kaggle don't hand out) and build that auto-discovery and OAuth machinery on your MCP.
 
 This works fantastically well for Jollyes. We already SSO into Claude.ai through Entra, so the natural flow is to use that same SSO to reach the MCP. The huge benefit, beyond security, is that we can see exactly who is using the MCP and for what.
 
