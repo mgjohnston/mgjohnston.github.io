@@ -4,12 +4,12 @@ title: "Authenticating MCPs: three ways we do it"
 categories: [ai]
 tags: [mcp, authentication, oauth, claude, jollyes, kaggle]
 ---
-*MCP authentication allows more than just security: we use it for dynamic tool registration and personalisation. Inspired from auth errors on the Kaggle MCP.*
+*MCP authentication gives us more than just security: we use it for dynamic tool registration and personalisation. Inspired by auth errors on the Kaggle MCP.*
 
 <div class="tldr" markdown="1">
 **TL;DR**
 
-- Claude.ai connectors take only a URL - no auth-header field, and no way to *start* OAuth themselves - so Kaggle's MCP 403'd me.
+- Claude.ai connectors only take a URL - no auth-header field, and no way to start OAuth themselves.
 - At Jollyes we authenticate Claude.ai three ways: OAuth 2.0 over SSO (the main one), no auth (when we're happy to share), or a hash in the URL.
 - Knowing who is calling allows more than security. It unlocks my favourite MCP trick: **dynamic tool registration** - a different set of tools, and personalised tool descriptions, per user.
 </div>
@@ -26,7 +26,7 @@ To be fair to Kaggle, I hadn't read their docs. When I did:
 
 > If your client is not OAuth 2.0 compliant, you can also use token authentication.
 
-So I minted a token, because neither Claude.ai nor Claude Code will drive Kaggle's OAuth for me:
+So I made a token, because neither Claude.ai nor Claude Code will drive Kaggle's OAuth for me:
 
 > Some resources or endpoints require authorization. To unlock full access you can authorize using OAuth 2.0.
 >
@@ -54,11 +54,11 @@ From here I had two choices. Reinstall the MCP locally in Claude Code with the t
 
 Or just let Claude Code use the Kaggle CLI - that was easiest.
 
-Now, this is really a Claude.ai limitation, not a Kaggle one. But Claude.ai is what we use at Jollyes Pets, and what I use personally to reach my own MCP from web Claude Code linked into GitHub (also another post to write). Thus, I thought it would be useful to share how to access MCPs using Claude.ai.
+Now, this is really a Claude.ai limitation, not a Kaggle one. But Claude.ai is what we use at Jollyes Pets, and what I use personally to reach my own MCP from web Claude Code linked into GitHub repos (also another post to write). Thus, I thought it would be useful to share how to access MCPs using Claude.ai.
 
 ## 1. The main one - OAuth 2.0
 
-This runs exactly opposite to the example above. Claude.ai *can* do OAuth - it just won't kick the flow off itself the way Kaggle expects (a command, or calling an `authorize` tool). Instead it responds to a challenge: your MCP returns a `401` pointing at its `/.well-known/` metadata[^wellknown], and Claude discovers the rest. If your identity provider supports Dynamic Client Registration, that's all it takes - paste the URL and go. We use Entra, whose dynamic registration is locked down, so we pre-register the app and hand Claude a Client ID and Secret (which, wisely, Kaggle don't hand out). Either way, the auto-discovery and OAuth machinery lives on your MCP.
+This runs exactly opposite to the example above. Claude.ai *can* do OAuth - it just won't kick the flow off itself the way Kaggle expects (a command, or calling an `authorize` tool). Instead it responds to a challenge: your MCP returns a `401` pointing at its `/.well-known/` metadata[^wellknown], and Claude discovers the rest. If your identity provider supports Dynamic Client Registration, that's all it takes - paste the URL and go. We use Entra, whose dynamic registration is locked down, so we pre-register the app and hand Claude a Client ID and Secret (which, wisely, Kaggle don't hand out). Either way, the auto-discovery and OAuth machinery lives on your server.
 
 This works fantastically well for [Jollyes](/stateful-retail-analyst-mcp/). We already SSO into Claude.ai through Entra, so the natural flow is to use that same SSO to reach the MCP. The huge benefit, beyond security, is that we can see exactly who is using the MCP and for what.
 
@@ -72,7 +72,7 @@ Sometimes we're happy to share!
 
 ## 3. The neat one - a token or a hash
 
-You might say this is exactly what Kaggle offers by adding a token into a header at set-up time, and you'd be right. But, I hit the same wall Kaggle did: I really wanted my personal MCP available to web Claude Code[^webcc] with no extra work, and Claude.ai connectors take only a URL. The work around was to allow the token as a query parameter:
+You might say this is exactly what Kaggle offers by adding a token into a header at set-up time, and you'd be right. I hit the same wall I did with the Kaggle MCP: I really wanted my personal MCP available to web Claude Code[^webcc] (as it links into Github directly, meaning you can make changes to any repo in the phone app), and Claude.ai connectors take only a URL. The work around was to allow the token as a query parameter[^docs]:
 
 ```
 https://mcp.matthew-johnston.com/mcp?token=XXX
@@ -80,7 +80,7 @@ https://mcp.matthew-johnston.com/mcp?token=XXX
 
 We follow the same pattern at Jollyes wherever the tools are quick, short-lived, or light-touch, so a full SSO set-up isn't worth it.
 
-But I like knowing who's calling. So we could add a `--user` header, or a `?user=` query param (which we do) - except, how do you know they are who they say they are? To do that, we ask for both `?user=` and `?hash=`, and don't share the secret token. The server checks that `sha2(token + user) === hash`. A shared hash proves you're allowed in; and that you are who you say you are.
+But I like knowing who's calling. We could add a `--user` header, or a `?user=` query param (which we do) - except, how do you know they are who they say they are? To do that, we ask for both `?user=` and `?hash=`, and don't share the secret token. The server checks that `sha2(secret_token + user) === hash`. The hash proves you're allowed in; and that you are who you say you are.
 
 ## Why I care so much who's who
 
@@ -105,7 +105,8 @@ To everyone else writing their own MCP, play with the dynamic nature of tool reg
 
 To Anthropic, may you allow MCP setup on Claude.ai with custom headers?
 
-I should start work on an entry now!
+I should start work on the Kaggle entry now!
 
 [^wellknown]: Are they well known? Hacker News had two good threads on it recently. One pointed to this blog: [mnot.net/blog/2026/well_known_uris](https://mnot.net/blog/2026/well_known_uris) and a separate discussion [here](https://news.ycombinator.com/item?id=48595980).
 [^webcc]: Confusingly distinct from CLI Claude Code.
+[^docs]: Which to be clear is [unsupported and prohibited](https://claude.com/docs/connectors/building/authentication): Tokens or API keys passed in the connector URL (for example, ?token=, ?apiKey=, or ?userToken= query parameters) are not supported. The MCP authorization specification explicitly prohibits access tokens in the URI query string.
